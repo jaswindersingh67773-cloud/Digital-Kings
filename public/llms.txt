@@ -1,0 +1,21 @@
+# Digital Kings
+
+> Engineering-grade AI automation, digital marketing, and custom web development — built by a software engineer with 10 years of experience.
+
+Digital Kings is a digital growth agency founded by a software engineer with a decade of experience building production systems. Unlike traditional marketing agencies, every service is built on engineering principles: systematic, measurable, and automated where possible.
+
+## Services
+
+- **AI Automation**: Custom n8n workflows, LLM integrations, CRM automation, and intelligent lead systems
+- **Digital Marketing**: Paid advertising (Google Ads, Meta Ads), SEO, email campaigns, and analytics
+- **Custom Web Development**: Full-stack Next.js websites — no templates, no page builders
+- **Social Media Management**: Strategy, content, and data-driven optimisation
+
+## Why Digital Kings
+
+The founder spent 10 years building software systems — architectures, automation pipelines, and full-stack applications. That engineering mindset applies directly to marketing: every campaign is a system, every decision is data-driven, and every client gets direct access to the person doing the work.
+
+## Contact
+
+Website: https://digikings.net
+Email: jaswindersingh6773@gmail.com

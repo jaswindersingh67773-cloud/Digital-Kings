@@ -173,7 +173,11 @@ export default function Hero({ introComplete }: { introComplete: boolean }) {
         </motion.div>
 
         {/* Headline — word by word, 3D flip in */}
-        <h1 className="font-[family-name:var(--font-cinzel)] text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8" style={{ perspective: "800px" }}>
+        <h1
+          aria-label="Engineering Meets Digital Growth"
+          className="font-[family-name:var(--font-cinzel)] text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8"
+          style={{ perspective: "800px" }}
+        >
           {HEADLINE.map((word, i) => (
             <motion.span
               key={word}
@@ -181,6 +185,7 @@ export default function Hero({ introComplete }: { introComplete: boolean }) {
               animate={phase >= 3 ? { opacity: 1, y: 0, rotateX: 0 } : {}}
               transition={{ delay: 0.3 + i * 0.12, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
               className={`inline-block mr-4 ${i === 3 ? "gold-gradient" : ""}`}
+              aria-hidden="true"
             >
               {word}
             </motion.span>
@@ -194,7 +199,7 @@ export default function Hero({ introComplete }: { introComplete: boolean }) {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="text-[#888] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          105 years building software systems. Now applying that same engineering
+          10 years building software systems. Now applying that same engineering
           precision to AI automation, digital marketing, and custom web development.
           Built different — because the builder is different.
         </motion.p>

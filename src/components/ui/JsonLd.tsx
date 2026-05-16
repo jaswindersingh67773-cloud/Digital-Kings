@@ -20,7 +20,16 @@ export default function JsonLd() {
           "Paid Advertising",
           "Marketing Automation",
         ],
-        sameAs: [],
+        sameAs: [
+          "https://www.linkedin.com/company/digikings",
+          "https://x.com/digikings",
+        ],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer enquiries",
+          email: "jaswindersingh6773@gmail.com",
+          availableLanguage: "English",
+        },
       },
       {
         "@type": "WebSite",
@@ -30,15 +39,25 @@ export default function JsonLd() {
         description:
           "Engineering-grade AI automation, digital marketing and custom web development.",
         publisher: { "@id": "https://digikings.net/#business" },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://digikings.net/#contact",
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "Person",
         "@id": "https://digikings.net/#founder",
-        name: "Digital Kings Founder",
+        name: "Jaswinder Singh",
         jobTitle: "Software Engineer & Digital Growth Specialist",
+        url: "https://digikings.net",
         description:
           "10 years of software engineering experience now applied to AI automation, digital marketing, and custom web development.",
         worksFor: { "@id": "https://digikings.net/#business" },
+        sameAs: [
+          "https://www.linkedin.com/in/jaswindersingh67773",
+          "https://github.com/jaswindersingh67773-cloud",
+        ],
         knowsAbout: [
           "Software Engineering",
           "AI Automation",
