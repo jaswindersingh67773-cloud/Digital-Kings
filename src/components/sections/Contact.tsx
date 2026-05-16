@@ -4,16 +4,43 @@ import { useInView } from "motion/react";
 import { useRef, useState } from "react";
 import SectionLabel from "../ui/SectionLabel";
 import GoldButton from "../ui/GoldButton";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
+
+type Status = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("loading");
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      business: (form.elements.namedItem("business") as HTMLInputElement).value,
+      budget: (form.elements.namedItem("budget") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Send failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please email me directly at jaswindersingh6773@gmail.com");
+    }
   }
 
   return (
@@ -36,14 +63,16 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {submitted ? (
+        {status === "success" ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="border border-[#C9A84C]/30 bg-[#141414] p-12 text-center"
           >
-            <div className="font-[family-name:var(--font-cinzel)] text-2xl gold-gradient font-bold mb-3">Message Received</div>
-            <p className="text-[#888]">We&apos;ll be in touch within 24 hours to schedule your strategy call.</p>
+            <div className="font-[family-name:var(--font-cinzel)] text-2xl gold-gradient font-bold mb-3">
+              Message Received
+            </div>
+            <p className="text-[#888]">I&apos;ll be in touch within 24 hours. Talk soon.</p>
           </motion.div>
         ) : (
           <motion.form
@@ -57,6 +86,7 @@ export default function Contact() {
               <div className="flex flex-col gap-2">
                 <label className="text-xs tracking-widest uppercase text-[#888]">Name</label>
                 <input
+                  name="name"
                   type="text"
                   required
                   placeholder="Your full name"
@@ -66,6 +96,7 @@ export default function Contact() {
               <div className="flex flex-col gap-2">
                 <label className="text-xs tracking-widest uppercase text-[#888]">Email</label>
                 <input
+                  name="email"
                   type="email"
                   required
                   placeholder="your@email.com"
@@ -77,6 +108,7 @@ export default function Contact() {
               <div className="flex flex-col gap-2">
                 <label className="text-xs tracking-widest uppercase text-[#888]">Business Name</label>
                 <input
+                  name="business"
                   type="text"
                   placeholder="Your company"
                   className="bg-[#0D0D0D] border border-[#2A2A2A] px-4 py-3 text-sm text-[#F5F0E8] placeholder-[#555] focus:outline-none focus:border-[#C9A84C] transition-colors"
@@ -85,6 +117,7 @@ export default function Contact() {
               <div className="flex flex-col gap-2">
                 <label className="text-xs tracking-widest uppercase text-[#888]">Monthly Budget</label>
                 <select
+                  name="budget"
                   className="bg-[#0D0D0D] border border-[#2A2A2A] px-4 py-3 text-sm text-[#aaa] focus:outline-none focus:border-[#C9A84C] transition-colors"
                 >
                   <option value="">Select range</option>
@@ -96,17 +129,31 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs tracking-widest uppercase text-[#888]">Tell Us Your Goal</label>
+              <label className="text-xs tracking-widest uppercase text-[#888]">Tell Me Your Goal</label>
               <textarea
+                name="message"
                 rows={4}
                 required
                 placeholder="What do you want to achieve? More leads, more sales, brand visibility..."
                 className="bg-[#0D0D0D] border border-[#2A2A2A] px-4 py-3 text-sm text-[#F5F0E8] placeholder-[#555] focus:outline-none focus:border-[#C9A84C] transition-colors resize-none"
               />
             </div>
+
+            {status === "error" && (
+              <p className="text-red-400 text-sm text-center">{errorMsg}</p>
+            )}
+
             <div className="flex justify-center pt-2">
-              <GoldButton>
-                Send Message <Send size={14} />
+              <GoldButton disabled={status === "loading"}>
+                {status === "loading" ? (
+                  <>
+                    <Loader2 size={14} className="animate-spin" /> Sending…
+                  </>
+                ) : (
+                  <>
+                    Send Message <Send size={14} />
+                  </>
+                )}
               </GoldButton>
             </div>
           </motion.form>
