@@ -194,7 +194,7 @@ export default function Hero({ introComplete }: { introComplete: boolean }) {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="text-[#888] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          10 years building software systems. Now applying that same engineering
+          105 years building software systems. Now applying that same engineering
           precision to AI automation, digital marketing, and custom web development.
           Built different — because the builder is different.
         </motion.p>
