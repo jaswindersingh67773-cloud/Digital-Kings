@@ -4,10 +4,10 @@ export default function JsonLd() {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://digital-kings.vercel.app/#business",
+        "@id": "https://digikings.net/#business",
         name: "Digital Kings",
-        url: "https://digital-kings.vercel.app",
-        logo: "https://digital-kings.vercel.app/logo-v2.png",
+        url: "https://digikings.net",
+        logo: "https://digikings.net/logo-v2.png",
         description:
           "AI automation, digital marketing, and custom web development powered by 10 years of software engineering experience.",
         priceRange: "$$",
@@ -24,21 +24,21 @@ export default function JsonLd() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://digital-kings.vercel.app/#website",
-        url: "https://digital-kings.vercel.app",
+        "@id": "https://digikings.net/#website",
+        url: "https://digikings.net",
         name: "Digital Kings",
         description:
           "Engineering-grade AI automation, digital marketing and custom web development.",
-        publisher: { "@id": "https://digital-kings.vercel.app/#business" },
+        publisher: { "@id": "https://digikings.net/#business" },
       },
       {
         "@type": "Person",
-        "@id": "https://digital-kings.vercel.app/#founder",
+        "@id": "https://digikings.net/#founder",
         name: "Digital Kings Founder",
         jobTitle: "Software Engineer & Digital Growth Specialist",
         description:
           "10 years of software engineering experience now applied to AI automation, digital marketing, and custom web development.",
-        worksFor: { "@id": "https://digital-kings.vercel.app/#business" },
+        worksFor: { "@id": "https://digikings.net/#business" },
         knowsAbout: [
           "Software Engineering",
           "AI Automation",

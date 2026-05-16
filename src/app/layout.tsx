@@ -18,7 +18,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://digital-kings.vercel.app";
+const SITE_URL = "https://digikings.net";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
