@@ -3,14 +3,18 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
-const links = ["Services", "About", "Results", "Process", "Contact"];
+const anchorLinks = ["About", "Results", "Process", "Contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
   const bg = useTransform(scrollY, [0, 80], ["rgba(13,13,13,0)", "rgba(13,13,13,0.95)"]);
   const borderOpacity = useTransform(scrollY, [0, 80], [0, 1]);
+
+  const linkClass =
+    "text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors duration-200";
 
   return (
     <motion.nav
@@ -22,7 +26,7 @@ export default function Navbar() {
         className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent"
       />
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <a href="#" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <Image
             src="/logo-v2.png"
             alt="Digital Kings"
@@ -35,17 +39,25 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
+          {/* Page links */}
+          <Link href="/services/ai-automation" className={linkClass}>
+            Services
+          </Link>
+          <Link href="/blog" className={linkClass}>
+            Blog
+          </Link>
+          {/* Anchor links (homepage sections) */}
+          {anchorLinks.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors duration-200"
+              href={`/#${link.toLowerCase()}`}
+              className={linkClass}
             >
               {link}
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="px-6 py-2.5 border border-[#C9A84C] text-[#C9A84C] text-sm tracking-widest uppercase hover:bg-[#C9A84C] hover:text-[#0D0D0D] transition-all duration-300"
           >
             Get Started
@@ -67,10 +79,24 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-[#141414] border-t border-[#2A2A2A] px-6 py-6 flex flex-col gap-4"
         >
-          {links.map((link) => (
+          <Link
+            href="/services/ai-automation"
+            onClick={() => setOpen(false)}
+            className="text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors"
+          >
+            Services
+          </Link>
+          <Link
+            href="/blog"
+            onClick={() => setOpen(false)}
+            className="text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors"
+          >
+            Blog
+          </Link>
+          {anchorLinks.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={`/#${link.toLowerCase()}`}
               onClick={() => setOpen(false)}
               className="text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors"
             >
@@ -78,7 +104,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="px-6 py-3 border border-[#C9A84C] text-[#C9A84C] text-sm tracking-widest uppercase text-center hover:bg-[#C9A84C] hover:text-[#0D0D0D] transition-all duration-300"
           >
