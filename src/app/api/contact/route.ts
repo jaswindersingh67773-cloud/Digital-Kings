@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     const { error } = await resend.emails.send({
       from: "Digital Kings <onboarding@resend.dev>",
-      to: ["jaswindersingh6773@gmail.com"],
+      to: ["jaswindersingh67773@gmail.com"],
       replyTo: email,
       subject: `New enquiry from ${name}${business ? ` — ${business}` : ""}`,
       html: `
@@ -58,12 +58,12 @@ export async function POST(req: Request) {
 
     if (error) {
       console.error("Resend error:", error);
-      return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+      return NextResponse.json({ error: "Failed to send email", detail: error }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Contact route error:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json({ error: "Server error", detail: String(err) }, { status: 500 });
   }
 }
