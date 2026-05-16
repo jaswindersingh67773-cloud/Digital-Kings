@@ -1,8 +1,16 @@
 import { MetadataRoute } from "next";
+import { locations } from "@/lib/locations";
 
 const BASE_URL = "https://digikings.net";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const locationEntries: MetadataRoute.Sitemap = locations.map((loc) => ({
+    url: `${BASE_URL}/locations/${loc.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   return [
     {
       url: BASE_URL,
@@ -52,5 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/locations`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...locationEntries,
   ];
 }

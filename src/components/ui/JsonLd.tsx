@@ -11,7 +11,17 @@ export default function JsonLd() {
         description:
           "AI automation, digital marketing, and custom web development powered by 10 years of software engineering experience.",
         priceRange: "$$",
-        areaServed: "Worldwide",
+        areaServed: [
+          { "@type": "City", name: "Bellevue", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Redmond", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Issaquah", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Renton", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Kent", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Auburn", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Federal Way", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Tacoma", containedInPlace: { "@type": "State", name: "Washington" } },
+          { "@type": "City", name: "Sammamish", containedInPlace: { "@type": "State", name: "Washington" } },
+        ],
         serviceType: [
           "AI Automation",
           "Digital Marketing",

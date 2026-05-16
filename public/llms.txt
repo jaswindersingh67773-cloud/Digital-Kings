@@ -15,6 +15,22 @@ Digital Kings is a digital growth agency founded by a software engineer with a d
 
 The founder spent 10 years building software systems — architectures, automation pipelines, and full-stack applications. That engineering mindset applies directly to marketing: every campaign is a system, every decision is data-driven, and every client gets direct access to the person doing the work.
 
+## Service Areas
+
+Digital Kings serves businesses across Washington state, with a focus on the Seattle metro area and Puget Sound region. Local SEO, geo-targeted paid advertising, and AI automation are available for all of the following cities:
+
+- **Bellevue, WA** — Tech hub, Microsoft/Amazon spillover, SaaS companies, financial services, luxury retail. Page: https://digikings.net/locations/bellevue-wa
+- **Redmond, WA** — Microsoft HQ, gaming studios, SaaS startups, tech consultancies. Page: https://digikings.net/locations/redmond-wa
+- **Issaquah, WA** — Costco HQ, growing suburb, outdoor/retail/lifestyle, local professional services. Page: https://digikings.net/locations/issaquah-wa
+- **Renton, WA** — Boeing, aerospace suppliers, healthcare, logistics, diverse industries. Page: https://digikings.net/locations/renton-wa
+- **Kent, WA** — Industrial backbone, manufacturing, warehousing, distribution, B2B wholesale. Page: https://digikings.net/locations/kent-wa
+- **Auburn, WA** — Fast-growing retail corridor, auto dealers, home services, healthcare practices. Page: https://digikings.net/locations/auburn-wa
+- **Federal Way, WA** — Diverse city between Seattle and Tacoma, healthcare, retail, legal services. Page: https://digikings.net/locations/federal-way-wa
+- **Tacoma, WA** — Port city, manufacturing, healthcare systems, arts and hospitality. Page: https://digikings.net/locations/tacoma-wa
+- **Sammamish, WA** — Affluent suburb, tech workers, wealth management, medical practices, professional services. Page: https://digikings.net/locations/sammamish-wa
+
+Locations index: https://digikings.net/locations
+
 ## Contact
 
 Website: https://digikings.net
