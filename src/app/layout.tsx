@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next"
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "600", "700", "900"],
@@ -31,6 +31,7 @@ export default function RootLayout({
     <html lang="en" className={`h-full antialiased ${cinzel.variable} ${inter.variable}`}>
       <body className="min-h-full flex flex-col bg-[#0D0D0D] text-[#F5F0E8]">
         {children}
+        <Analytics/>
       </body>
     </html>
   );
