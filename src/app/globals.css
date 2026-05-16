@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0D0D0D;
+  --foreground: #F5F0E8;
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #9A7B2F;
+  --navy: #0A0F1E;
+  --charcoal: #141414;
+  --surface: #1A1A1A;
+  --surface-2: #222222;
+  --border: #2A2A2A;
+  --muted: #888888;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-navy: var(--navy);
+  --color-charcoal: var(--charcoal);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-cinzel), serif;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #9A7B2F 0%, #C9A84C 40%, #E8C97A 60%, #C9A84C 80%, #9A7B2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border {
+  border: 1px solid;
+  border-image: linear-gradient(135deg, #9A7B2F, #C9A84C, #E8C97A, #C9A84C, #9A7B2F) 1;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+/* Hide native scrollbar — custom gold strand is used instead */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
