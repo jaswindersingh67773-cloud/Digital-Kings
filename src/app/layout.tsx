@@ -3,7 +3,7 @@ import { Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import JsonLd from "@/components/ui/JsonLd";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "600", "700", "900"],
