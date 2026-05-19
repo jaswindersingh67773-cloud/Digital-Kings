@@ -2,10 +2,12 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import SectionLabel from "@/components/ui/SectionLabel";
 import GoldButton from "@/components/ui/GoldButton";
+import { locations } from "@/lib/locations";
 import { Bot, Workflow, Database, Mail, BarChart3, Zap, CheckCircle2 } from "lucide-react";
 
 // Metadata cannot be exported from a client component — handled via parent layout or a separate metadata file.
@@ -85,6 +87,9 @@ export default function AIAutomationPage() {
 
   const processRef = useRef(null);
   const processInView = useInView(processRef, { once: true, margin: "-80px" });
+
+  const citiesRef = useRef(null);
+  const citiesInView = useInView(citiesRef, { once: true, margin: "-80px" });
 
   const ctaRef = useRef(null);
   const ctaInView = useInView(ctaRef, { once: true, margin: "-60px" });
@@ -208,6 +213,52 @@ export default function AIAutomationPage() {
                     </h3>
                     <p className="text-[#666] text-sm leading-relaxed">{step.desc}</p>
                   </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Cities We Serve */}
+        <section className="py-28 md:py-36 px-6 bg-[#080808] relative overflow-hidden">
+          <SweepLine inView={citiesInView} />
+          <div className="max-w-7xl mx-auto" ref={citiesRef}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={citiesInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <SectionLabel>Service Areas</SectionLabel>
+              <h2 className="font-[family-name:var(--font-cinzel)] text-3xl md:text-4xl font-bold text-[#F5F0E8] mt-2">
+                AI Automation Services Across{" "}
+                <span className="gold-gradient">Washington State</span>
+              </h2>
+              <p className="text-[#666] mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+                Based in the Pacific Northwest, serving businesses from Tacoma
+                to Sammamish.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1A1A1A]">
+              {locations.map((loc, i) => (
+                <motion.div
+                  key={loc.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={citiesInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: i * 0.06 }}
+                >
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    className="bg-[#080808] p-8 flex flex-col group hover:bg-[#0F0F0F] border border-transparent hover:border-[#C9A84C]/30 transition-all duration-300 h-full"
+                  >
+                    <h3 className="font-[family-name:var(--font-cinzel)] text-lg font-bold text-[#F5F0E8] mb-2 group-hover:text-[#E8C97A] transition-colors duration-200">
+                      {loc.city}
+                    </h3>
+                    <p className="text-[#666] text-sm leading-relaxed">
+                      {loc.aiUseCases[0]}
+                    </p>
+                  </Link>
                 </motion.div>
               ))}
             </div>

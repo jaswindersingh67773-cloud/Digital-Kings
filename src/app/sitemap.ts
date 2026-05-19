@@ -43,6 +43,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/blog/ai-automation-bellevue-redmond-businesses`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/ai-automation-tacoma-kent-manufacturing`,
+      lastModified: new Date("2026-05-12"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/small-business-ai-automation-washington`,
+      lastModified: new Date("2026-05-08"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/services/ai-automation`,
       lastModified: new Date(),
       changeFrequency: "monthly",

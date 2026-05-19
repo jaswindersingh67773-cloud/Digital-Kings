@@ -11,6 +11,13 @@ export interface Location {
   industries: string[];
   population: string;
   nearbyCity: string;
+  // AI Automation SEO fields
+  aiTitle: string;
+  aiMetaDescription: string;
+  aiH1: string;
+  aiUseCases: string[];
+  aiTools: string[];
+  aiStats: { saving: string; impact: string };
 }
 
 export const locations: Location[] = [
@@ -36,6 +43,22 @@ export const locations: Location[] = [
     ],
     population: "~160,000",
     nearbyCity: "Seattle",
+    aiTitle: "AI Automation Services in Bellevue, WA | Digital Kings",
+    aiMetaDescription:
+      "Top-rated AI automation services in Bellevue, WA. Automate workflows, leads & operations with n8n, custom AI agents, and LLM integrations. Free audit.",
+    aiH1: "AI Automation Services in Bellevue, WA",
+    aiUseCases: [
+      "Automate client onboarding for financial services firms",
+      "AI lead qualification for luxury real estate agencies",
+      "Automated contract and proposal workflows for law firms",
+      "LLM-powered email triage and routing for SaaS customer success teams",
+      "AI-driven reporting dashboards for tech startup executives",
+    ],
+    aiTools: ["n8n", "OpenAI API", "HubSpot", "Slack"],
+    aiStats: {
+      saving: "Hours saved per week on manual client onboarding and follow-up",
+      impact: "Faster lead response with AI-powered qualification and routing",
+    },
   },
   {
     slug: "redmond-wa",
@@ -59,6 +82,22 @@ export const locations: Location[] = [
     ],
     population: "~75,000",
     nearbyCity: "Bellevue",
+    aiTitle: "AI Automation Services in Redmond, WA | Digital Kings",
+    aiMetaDescription:
+      "Custom AI automation for Redmond businesses. Build n8n pipelines, LLM integrations & automated QA for gaming studios, SaaS companies & tech teams. Free audit.",
+    aiH1: "AI Automation Services in Redmond, WA",
+    aiUseCases: [
+      "Automated QA pipelines and bug triage for gaming studios",
+      "AI-powered customer support and ticket routing for SaaS companies",
+      "Automated candidate screening workflows for tech recruitment firms",
+      "LLM-driven documentation generation for software consultancies",
+      "AI usage analytics and alerting for cloud software products",
+    ],
+    aiTools: ["n8n", "Claude API", "Airtable", "Slack"],
+    aiStats: {
+      saving: "Hours saved per sprint on manual QA reporting and ticket triage",
+      impact: "Faster support resolution with AI-powered ticket classification",
+    },
   },
   {
     slug: "issaquah-wa",
@@ -82,6 +121,22 @@ export const locations: Location[] = [
     ],
     population: "~40,000",
     nearbyCity: "Bellevue",
+    aiTitle: "AI Automation Services in Issaquah, WA | Digital Kings",
+    aiMetaDescription:
+      "AI automation services for Issaquah businesses. Automate inventory, scheduling & customer follow-up with n8n and custom AI agents. Book a free audit today.",
+    aiH1: "AI Automation Services in Issaquah, WA",
+    aiUseCases: [
+      "Inventory and supplier automation for retail businesses",
+      "AI scheduling and appointment management for outdoor and fitness services",
+      "Automated customer follow-up sequences for local professional services",
+      "LLM-powered menu and pricing update workflows for restaurants",
+      "AI-driven lead capture and routing for home services contractors",
+    ],
+    aiTools: ["n8n", "Make", "OpenAI API", "Notion"],
+    aiStats: {
+      saving: "Hours saved per week on manual scheduling and appointment follow-up",
+      impact: "Fewer no-shows with automated reminder and rebooking workflows",
+    },
   },
   {
     slug: "renton-wa",
@@ -105,6 +160,22 @@ export const locations: Location[] = [
     ],
     population: "~110,000",
     nearbyCity: "Seattle",
+    aiTitle: "AI Automation Services in Renton, WA | Digital Kings",
+    aiMetaDescription:
+      "AI automation for Renton businesses. Automate compliance reporting, maintenance scheduling & supplier comms for aerospace, healthcare & logistics. Free audit.",
+    aiH1: "AI Automation Services in Renton, WA",
+    aiUseCases: [
+      "Automated compliance reporting for aerospace suppliers",
+      "AI maintenance scheduling and work order management for manufacturing plants",
+      "Patient intake and appointment automation for healthcare practices",
+      "Automated supplier communication workflows for logistics companies",
+      "AI-powered lead follow-up sequences for automotive dealerships",
+    ],
+    aiTools: ["n8n", "OpenAI API", "Airtable", "HubSpot"],
+    aiStats: {
+      saving: "Hours saved per week on manual compliance reporting and data entry",
+      impact: "Faster patient intake with automated form collection and routing",
+    },
   },
   {
     slug: "kent-wa",
@@ -128,6 +199,22 @@ export const locations: Location[] = [
     ],
     population: "~135,000",
     nearbyCity: "Renton",
+    aiTitle: "AI Automation Services in Kent, WA | Digital Kings",
+    aiMetaDescription:
+      "AI automation for Kent's industrial and distribution businesses. Automate order processing, inventory management & B2B outreach with n8n. Free audit.",
+    aiH1: "AI Automation Services in Kent, WA",
+    aiUseCases: [
+      "Order processing automation for distribution warehouses",
+      "AI-powered inventory management for B2B wholesalers",
+      "Automated purchase order and supplier communication workflows",
+      "LLM-driven RFQ parsing and quote generation for manufacturers",
+      "AI lead scoring and outreach automation for industrial services companies",
+    ],
+    aiTools: ["n8n", "Make", "OpenAI API", "Airtable"],
+    aiStats: {
+      saving: "Hours saved per week on manual order entry and purchase order processing",
+      impact: "Fewer stockouts with AI-powered inventory threshold monitoring",
+    },
   },
   {
     slug: "auburn-wa",
@@ -151,6 +238,22 @@ export const locations: Location[] = [
     ],
     population: "~85,000",
     nearbyCity: "Federal Way",
+    aiTitle: "AI Automation Services in Auburn, WA | Digital Kings",
+    aiMetaDescription:
+      "AI automation services for Auburn businesses. Automate appointment booking, lead follow-up & customer review management with n8n and AI agents. Free audit.",
+    aiH1: "AI Automation Services in Auburn, WA",
+    aiUseCases: [
+      "Automated appointment booking and reminders for auto dealerships",
+      "AI follow-up sequences for home services companies",
+      "Automated review request workflows for retail and restaurant businesses",
+      "AI-powered lead nurturing for dental and healthcare practices",
+      "Automated service reminder campaigns for automotive service shops",
+    ],
+    aiTools: ["n8n", "Make", "OpenAI API", "HubSpot"],
+    aiStats: {
+      saving: "Hours saved per week on manual appointment confirmation and follow-up",
+      impact: "More booked appointments with automated reminder and rebooking flows",
+    },
   },
   {
     slug: "federal-way-wa",
@@ -174,6 +277,22 @@ export const locations: Location[] = [
     ],
     population: "~98,000",
     nearbyCity: "Tacoma",
+    aiTitle: "AI Automation Services in Federal Way, WA | Digital Kings",
+    aiMetaDescription:
+      "AI automation for Federal Way businesses. Automate patient intake, review management & retail operations with n8n and custom LLM agents. Free audit.",
+    aiH1: "AI Automation Services in Federal Way, WA",
+    aiUseCases: [
+      "Patient intake automation for healthcare clinics",
+      "AI review management and response workflows for retail chains",
+      "Automated multilingual client communication for legal and immigration services",
+      "AI-powered student lead qualification for tutoring and education centers",
+      "Automated order and inventory workflows for multi-cultural food businesses",
+    ],
+    aiTools: ["n8n", "OpenAI API", "Make", "Notion"],
+    aiStats: {
+      saving: "Hours saved per week on manual patient intake and document collection",
+      impact: "Faster client response with AI-powered multilingual communication workflows",
+    },
   },
   {
     slug: "tacoma-wa",
@@ -197,6 +316,22 @@ export const locations: Location[] = [
     ],
     population: "~220,000",
     nearbyCity: "Seattle",
+    aiTitle: "AI Automation Services in Tacoma, WA | Digital Kings",
+    aiMetaDescription:
+      "Top AI automation services in Tacoma, WA. Automate port logistics, freight operations & hospitality bookings with n8n and custom AI agents. Free audit.",
+    aiH1: "AI Automation Services in Tacoma, WA",
+    aiUseCases: [
+      "Port logistics automation for freight and shipping companies",
+      "AI booking systems and guest communication for hospitality businesses",
+      "Automated patient scheduling and intake for healthcare systems",
+      "AI-powered contract and compliance tracking for defense contractors",
+      "Automated event booking and marketing workflows for arts and hospitality venues",
+    ],
+    aiTools: ["n8n", "OpenAI API", "Salesforce", "Slack"],
+    aiStats: {
+      saving: "Hours saved per week on manual shipment tracking and logistics reporting",
+      impact: "Faster booking confirmation with AI-powered hospitality automation",
+    },
   },
   {
     slug: "sammamish-wa",
@@ -220,6 +355,22 @@ export const locations: Location[] = [
     ],
     population: "~70,000",
     nearbyCity: "Redmond",
+    aiTitle: "AI Automation Services in Sammamish, WA | Digital Kings",
+    aiMetaDescription:
+      "AI automation for Sammamish businesses. Automate wealth management reporting, client communications & medical scheduling with n8n and AI agents. Free audit.",
+    aiH1: "AI Automation Services in Sammamish, WA",
+    aiUseCases: [
+      "Automated wealth management reporting for financial advisors",
+      "AI client communication and appointment scheduling for medical practices",
+      "Automated tutoring session reminders and progress reporting for education centers",
+      "AI-powered lead nurturing workflows for high-end home services",
+      "LLM-driven document drafting and client onboarding for professional services",
+    ],
+    aiTools: ["n8n", "Claude API", "HubSpot", "Notion"],
+    aiStats: {
+      saving: "Hours saved per week on manual client reporting and communication",
+      impact: "Higher client retention with automated follow-up and check-in workflows",
+    },
   },
 ];
 
