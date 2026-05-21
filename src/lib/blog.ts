@@ -247,6 +247,122 @@ export const blogPosts: BlogPost[] = [
 <p>If you are a small business owner in Washington state — whether in Bellevue, Redmond, Issaquah, Renton, Kent, Auburn, Federal Way, Tacoma, or Sammamish — and you want to understand specifically which of your processes are worth automating, we offer a free consultation where we map your workflows and identify the highest-ROI starting points. No commitment, no sales pitch. Just an honest analysis of where automation can save you time and money.</p>
     `.trim(),
   },
+  {
+    slug: "ai-agents-2026-business-guide",
+    title: "AI Agents in 2026: What They Are and Why Every Business Needs to Pay Attention",
+    description:
+      "AI agents are the biggest shift in automation since the cloud. They don't just run workflows — they make decisions, use tools, and act autonomously. Here's what that means for your business.",
+    date: "2026-05-20",
+    readTime: "7 min read",
+    category: "AI Automation",
+    content: `
+<h2>From Workflows to Agents: What Changed</h2>
+<p>For the past few years, automation meant rules. If this happens, do that. Zapier, Make, n8n — all powerful, all fundamentally instruction-following machines. You define every branch, every condition, every output. The moment something unexpected happens, the workflow breaks.</p>
+<p>AI agents are different. An agent doesn't just follow instructions — it <strong>reasons about a goal</strong>, decides which tools to use, executes actions, evaluates the result, and adjusts. It can browse the web, write and run code, send emails, update a CRM, and loop back if the outcome wasn't right. All without a human in the loop.</p>
+<p>In 2026, this is no longer experimental. OpenAI's Operator, Anthropic's Claude agents, and open-source frameworks like LangGraph and CrewAI have made production-ready agents accessible to businesses of any size.</p>
+
+<h2>What AI Agents Can Actually Do (With Specific Examples)</h2>
+<ul>
+  <li><strong>Sales research agent.</strong> Give it a list of company names. It browses LinkedIn, their website, recent news, and job postings — then writes a personalised outreach email for each one and adds it to your CRM. What used to take a sales rep 45 minutes per prospect takes the agent 90 seconds.</li>
+  <li><strong>Customer support agent.</strong> Reads incoming support tickets, checks your knowledge base, looks up the customer's order history or account status, and either resolves the issue autonomously or drafts a response for human review — with full context attached. Handles 60–80% of tier-1 tickets without escalation.</li>
+  <li><strong>Competitive intelligence agent.</strong> Monitors your competitors' websites, pricing pages, job postings, and review sites weekly. Summarises changes and emails you a digest every Monday. No manual tracking required.</li>
+  <li><strong>Lead qualification agent.</strong> When a new lead fills out your form, the agent researches their business, scores them against your ICP criteria, checks LinkedIn for mutual connections, and routes them with a qualification summary attached — before you've even seen the notification.</li>
+</ul>
+
+<h2>The Stack Behind Production Agents in 2026</h2>
+<p>Most production agents today are built on one of three foundations: <strong>OpenAI's Assistants API</strong> (easiest to start, best tool-calling reliability), <strong>Anthropic's Claude API</strong> (strongest reasoning, best for complex multi-step tasks), or <strong>open-source frameworks</strong> like LangGraph or AutoGen (most control, runs on your infrastructure). These are orchestrated through workflow tools like n8n — which now has native AI agent nodes — or custom Python backends.</p>
+<p>The key components every agent needs: a language model (the brain), tools (the hands — APIs, browsers, databases), memory (short-term context + long-term storage), and an orchestration layer that manages the loop of reason → act → observe → repeat.</p>
+
+<h2>Where Most Businesses Should Start</h2>
+<p>The mistake is trying to build a general-purpose agent that does everything. Start narrow. Pick one high-frequency, time-consuming process — lead qualification, support triage, report generation — and build an agent for exactly that. Measure the time saved. Then expand.</p>
+<p>The businesses building these systems now are creating a compounding advantage that will be very difficult to close in 18 months. The ones waiting for the technology to "mature" are waiting for a train that already left.</p>
+
+<h2>What This Means If You're Not Technical</h2>
+<p>You don't need to understand transformers or write Python to benefit from AI agents. You need to understand your own business processes well enough to describe them clearly — which goals, which tools, which outputs. That's the brief an engineer like me turns into a working system. The technical implementation is the easy part; the hard part is knowing which problem is worth solving.</p>
+    `.trim(),
+  },
+  {
+    slug: "geo-generative-engine-optimization-2026",
+    title: "GEO: How to Get Your Business Cited by ChatGPT, Perplexity, and AI Search in 2026",
+    description:
+      "Google is no longer the only search engine that matters. AI-powered search tools are answering millions of queries daily — and most businesses have no strategy for appearing in those answers.",
+    date: "2026-05-18",
+    readTime: "6 min read",
+    category: "Digital Marketing",
+    content: `
+<h2>The Search Landscape Just Fractured</h2>
+<p>For 20 years, SEO meant one thing: rank on Google. That's no longer true. In 2026, a significant and growing portion of search queries are answered directly by AI tools — ChatGPT (now with web browsing on by default), Perplexity AI, Google's AI Overviews, Microsoft Copilot, and Claude. These tools don't send users to a list of links. They synthesise an answer and cite their sources.</p>
+<p>If your business isn't being cited as a source, you're invisible to a growing segment of buyers who never click through to traditional search results. This is the problem Generative Engine Optimisation (GEO) solves.</p>
+
+<h2>How AI Search Tools Decide What to Cite</h2>
+<p>Unlike Google's PageRank algorithm, AI search tools prioritise sources based on a different set of signals:</p>
+<ul>
+  <li><strong>Specificity.</strong> Vague content ("we offer great marketing services") is never cited. Specific, factual content ("n8n automation workflows reduce lead response time by eliminating manual CRM entry") is exactly what LLMs quote.</li>
+  <li><strong>Structured information.</strong> Clear headings, bullet points, definition-style explanations, and numbered processes are easier for models to extract and cite. Dense paragraph prose gets skipped.</li>
+  <li><strong>Entity clarity.</strong> The AI needs to know who you are. Consistent mentions of your business name, location, and service type across your site, your schema markup, and external sources builds your entity graph — the set of facts the model associates with your brand.</li>
+  <li><strong>Freshness signals.</strong> AI tools with web access favour recently updated content. A blog post dated last week outranks one from 2022 in real-time AI search.</li>
+  <li><strong>llms.txt.</strong> A relatively new convention (borrowed from robots.txt logic) — a plain text file at yourdomain.com/llms.txt that gives AI crawlers a structured summary of who you are, what you do, and what content is most relevant. Not all AI tools use it yet, but Perplexity and Claude's web search do.</li>
+</ul>
+
+<h2>The GEO Optimisation Checklist</h2>
+<ul>
+  <li><strong>Add llms.txt</strong> — a concise, plain-English summary of your business, services, and location. Structure it with markdown headers. Include your key facts, pricing range, and service areas.</li>
+  <li><strong>Write answer-first content.</strong> Lead every blog post and service page with a direct answer to the question the page targets. AI tools pull the clearest, most direct response — not the most eloquent one.</li>
+  <li><strong>Use structured data (JSON-LD).</strong> Schema markup gives AI crawlers machine-readable facts about your business — name, location, services, pricing range, contact details. It's the closest thing to a direct data feed for AI models.</li>
+  <li><strong>Build citations on authoritative sources.</strong> Clutch, G2, UpCity, industry directories, and local Chamber of Commerce listings all feed into the training and retrieval data AI tools use. A Clutch profile with reviews is worth more for GEO than 10 generic backlinks.</li>
+  <li><strong>Use your brand name consistently.</strong> Every page, every directory listing, every social bio should use the exact same business name. Entity disambiguation matters more in AI search than in traditional SEO.</li>
+</ul>
+
+<h2>What "Ranking" Means in AI Search</h2>
+<p>In traditional SEO, ranking means appearing in position 1–10 on a results page. In AI search, "ranking" means being the source cited in the synthesised answer — which is far more valuable. A single citation in a ChatGPT response seen by a high-intent buyer is worth more than position 5 in Google's organic results.</p>
+<p>The businesses that understand this early and build GEO-optimised content now will dominate AI-cited results before their competitors realise the game has changed.</p>
+
+<h2>The Practical Starting Point</h2>
+<p>Don't try to optimise for everything at once. Pick two or three questions your ideal clients ask — "what does AI automation cost for a small business?", "best digital marketing agency in Bellevue WA" — and write the clearest, most specific, most directly useful answer to each one on your site. That's GEO in its most actionable form.</p>
+    `.trim(),
+  },
+  {
+    slug: "digital-marketing-trends-2026",
+    title: "5 Digital Marketing Trends in 2026 That Are Actually Worth Your Attention",
+    description:
+      "The marketing landscape shifts constantly, but most 'trends' are noise. These five are fundamentally changing how businesses acquire and retain customers — and they're not going away.",
+    date: "2026-05-15",
+    readTime: "8 min read",
+    category: "Digital Marketing",
+    content: `
+<h2>How to Read a Trends List</h2>
+<p>Most marketing trend articles recycle the same five buzzwords every year with a different number in the title. This one won't do that. Every trend listed here meets three criteria: it's having a measurable impact on campaigns right now, the underlying mechanism is sound (not hype), and there's a clear action a business can take. Let's get into it.</p>
+
+<h2>1. AI-Generated Ad Creative Is Outperforming Human-Made Creative — At Scale</h2>
+<p>Not because AI is more creative than humans. It isn't. But because <strong>iteration speed</strong> is now the primary driver of paid ad performance, and AI can produce 50 variations of a creative asset in the time it takes a human designer to produce five.</p>
+<p>The businesses winning on Meta and Google Ads in 2026 are running 30–50 creative variants simultaneously, letting the algorithms identify winners in 48–72 hours, and killing losers immediately. This is impossible to do with a traditional creative process. Tools like Midjourney, Runway, and Adobe Firefly combined with LLM-written copy are enabling this loop at a fraction of the previous cost.</p>
+<p><strong>Action:</strong> Stop treating creative production as a slow, high-touch process. Build a rapid-iteration creative workflow — brief, generate, test, kill, repeat. The creative that runs for six months is almost never the one you thought would win.</p>
+
+<h2>2. First-Party Data Has Gone From Best Practice to Survival Requirement</h2>
+<p>Third-party cookies are effectively dead across all major browsers. Apple's App Tracking Transparency framework has degraded Meta's targeting accuracy by 20–40% for many advertisers. Google's Privacy Sandbox is limiting cross-site tracking at the infrastructure level.</p>
+<p>The businesses that built their own data assets — email lists, CRM databases, loyalty programmes, direct relationships — are insulated from these changes. The ones that relied entirely on platform-level targeting are seeing CPAs climb and returns shrink.</p>
+<p><strong>Action:</strong> Every piece of content, every ad, every touchpoint should have a first-party data capture mechanism attached — email capture, quiz, consultation booking, download. Your list is your most durable marketing asset.</p>
+
+<h2>3. Hyper-Local Targeting Is Back, Powered by AI</h2>
+<p>For years, the trend was scale — reach the widest possible audience, let the algorithm sort it out. That pendulum has swung back. The most efficient campaigns in 2026 are hyper-targeted: specific suburbs, specific industries, specific job titles, specific behaviours — with creative that speaks directly to that segment.</p>
+<p>AI has made this economically viable. You can now generate city-specific ad copy, location-specific landing pages, and geo-targeted sequences at a cost that would have been prohibitive three years ago. A plumber serving five suburbs doesn't need a national campaign — they need five highly targeted local campaigns, each with creative that references the specific area.</p>
+<p><strong>Action:</strong> Break your geographic targeting into the smallest viable segments. Create location-specific landing pages (not just the homepage). Test location-referenced creative ("Serving Bellevue businesses since...") against generic variants. The local specificity almost always wins.</p>
+
+<h2>4. Short-Form Video Has Become a Direct-Response Channel, Not Just Brand Awareness</h2>
+<p>TikTok and Instagram Reels started as brand awareness plays. In 2026, they're full-funnel channels — with checkout, lead capture, and direct booking integrations built in. TikTok Shop has processed billions in transactions. Instagram's lead gen ads convert at rates competitive with Google Search in certain verticals.</p>
+<p>The format that's working is not polished brand content — it's <strong>problem-aware, solution-specific, direct-response video</strong>. "Here's the problem you have. Here's why it happens. Here's exactly how we fix it. Book a call." Fifteen to sixty seconds. No production budget required. Hook in the first two seconds or it's over.</p>
+<p><strong>Action:</strong> Stop waiting for professional video production. Film on a phone. Lead with the problem, not your brand. Add captions (85% of short-form video is watched with sound off). Test direct CTAs in the video itself, not just in the caption.</p>
+
+<h2>5. Marketing Automation Is Merging With AI to Create Personalisation at Scale</h2>
+<p>Traditional marketing automation was personalisation theatre — "Hi [First Name]" in an email that was otherwise identical for every recipient. AI-powered automation is different. It can analyse individual behaviour, purchase history, engagement patterns, and stated preferences to generate genuinely different messages for different segments — at scale, in real time.</p>
+<p>The practical version: an e-commerce brand sending 10,000 emails a day where each email's product recommendations, subject line, send time, and offer are determined by an AI model trained on that customer's behaviour. The conversion lift over traditional batch-and-blast is typically 15–35%.</p>
+<p>For service businesses, this looks like: AI-triggered follow-up sequences based on which pages a prospect visited, what content they downloaded, and how they responded to previous outreach — with messaging that addresses their specific stage and concern.</p>
+<p><strong>Action:</strong> Audit your current automation sequences. How many of them are actually personalised beyond the first name? Identify one sequence — welcome email, post-enquiry follow-up, re-engagement — and rebuild it with conditional logic driven by behaviour, not just a fixed schedule.</p>
+
+<h2>What These Trends Have in Common</h2>
+<p>Every one of these trends rewards businesses that treat marketing as a system — something to be built, measured, iterated, and optimised — rather than a cost centre to be minimised. The tools are more powerful than they've ever been. The question is whether you're building with them or watching from the sidelines.</p>
+    `.trim(),
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

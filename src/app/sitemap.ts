@@ -61,6 +61,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/ai-agents-2026-business-guide`,
+      lastModified: new Date("2026-05-20"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/geo-generative-engine-optimization-2026`,
+      lastModified: new Date("2026-05-18"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/digital-marketing-trends-2026`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/services/ai-automation`,
       lastModified: new Date(),
       changeFrequency: "monthly",
