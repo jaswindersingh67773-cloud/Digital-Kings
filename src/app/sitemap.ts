@@ -61,6 +61,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/google-ads-wasting-budget`,
+      lastModified: new Date("2026-05-22"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/landing-page-vs-homepage-mistake`,
+      lastModified: new Date("2026-05-19"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog/seo-mistakes-killing-rankings`,
+      lastModified: new Date("2026-05-16"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/blog/ai-agents-2026-business-guide`,
       lastModified: new Date("2026-05-20"),
       changeFrequency: "monthly",

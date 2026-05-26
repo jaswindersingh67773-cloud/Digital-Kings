@@ -248,6 +248,141 @@ export const blogPosts: BlogPost[] = [
     `.trim(),
   },
   {
+    slug: "google-ads-wasting-budget",
+    title: "Why Your Google Ads Are Wasting 40% of Your Budget (And the Audit That Proves It)",
+    description:
+      "Most Google Ads accounts have the same five problems. They're not obvious, they're not flagged by Google, and they're draining budget every single day. Here's how to find them.",
+    date: "2026-05-22",
+    readTime: "7 min read",
+    category: "Digital Marketing",
+    content: `
+<h2>Google's Incentives Are Not Your Incentives</h2>
+<p>Before anything else, understand this: Google makes money when you spend money. Their recommendations — "Expand your reach", "Enable Smart Bidding", "Add more keywords" — are not neutral advice. They're product upsells dressed as optimisation. A Google Ads account managed entirely on autopilot, following every recommendation Google surfaces, will spend more money and almost never spend it better.</p>
+<p>This isn't cynicism. It's the structure of the product. Once you accept it, you can audit your account with the right lens.</p>
+
+<h2>Run This Audit Before Touching Anything Else</h2>
+<p>Pull 90 days of data. Look at these five things in order:</p>
+<ul>
+  <li><strong>Search Terms Report.</strong> Go to Keywords → Search Terms. Filter by spend, sort descending. You are looking for irrelevant queries that triggered your ads. In most unaudited accounts, 20–35% of spend goes to terms with zero commercial intent. Add every irrelevant term as a negative keyword. This is the single highest-ROI action in Google Ads and takes 90 minutes.</li>
+  <li><strong>Match Type Distribution.</strong> If more than 40% of your impressions come from Broad Match keywords, you have a targeting problem. Broad Match in 2026 is effectively "let Google decide what your ad means" — which means your ad for "AI automation software" is showing for "what is artificial intelligence" and "automation engineer salary". Go through every Broad Match keyword and ask whether you'd pay for the queries it's actually capturing.</li>
+  <li><strong>Device Bid Adjustments.</strong> Pull performance split by device. Most service businesses convert at dramatically different rates on mobile vs desktop. If you're paying the same CPC for both with a 3x conversion rate difference, you're overpaying for mobile clicks. Set bid adjustments accordingly.</li>
+  <li><strong>Time-of-Day and Day-of-Week Performance.</strong> Pull the Hour of Day and Day of Week reports. Find the hours and days where your cost-per-conversion is 2x your average. Turn those off or reduce bids. For most B2B services, Saturday at 11pm is not worth the same bid as Tuesday at 2pm.</li>
+  <li><strong>Quality Scores.</strong> Sort your keywords by Quality Score. Anything below 5 is costing you significantly more per click than it should. Quality Score drives your Ad Rank alongside bid — a keyword with QS 3 costs roughly 3x more for the same position as QS 9. Fix the landing page relevance or pause the keyword.</li>
+</ul>
+
+<h2>The Three Settings Google Quietly Turns On</h2>
+<p>Check these in every account — Google enables them by default and most advertisers never notice:</p>
+<ul>
+  <li><strong>Search Partners.</strong> Your ads may be showing on Google's partner network (non-Google search engines, directory sites, retailer product pages). Pull performance split by network. If Search Partners has a CPA 2x higher than Google Search, turn it off. It's a checkbox in campaign settings.</li>
+  <li><strong>Display Expansion on Search Campaigns.</strong> This is buried in campaign settings. It allows Google to show your search campaign ads on Display placements when it "predicts" you'll get more conversions. It almost never performs as well. Check whether it's enabled and turn it off.</li>
+  <li><strong>Auto-Applied Recommendations.</strong> Google can automatically apply their own recommendations to your account. Go to Recommendations → Auto-Apply and check what's enabled. In most accounts, this should be entirely off. Auto-applied recommendations optimise for Google's definition of a good account, not yours.</li>
+</ul>
+
+<h2>What Good Account Structure Actually Looks Like</h2>
+<p>One campaign per service line or audience segment. One ad group per tightly themed keyword cluster (3–8 keywords maximum). Two to three ad variants per ad group — one control, two challengers. Conversion tracking verified in Google Tag Manager before any budget is committed. Negative keyword lists applied at account level and reviewed weekly for the first 60 days.</p>
+<p>This is not complicated. It's just disciplined. Most accounts underperform because someone set them up once and let Google's automation run from there. Automation works better with guardrails. Be the person who builds the guardrails.</p>
+
+<h2>The Number That Matters</h2>
+<p>Your target metric is not ROAS. ROAS is revenue divided by ad spend — it ignores your margins, your overheads, and your actual profit. The number that matters is contribution margin per acquisition: (revenue from customer × gross margin) minus acquisition cost. If that number is positive and growing, your campaign is working. Everything else is a proxy.</p>
+<p>Run this audit on your account this week. If you find less than 15% wasted spend, your account is unusually clean. If you find more than 30%, you've just identified exactly where your next improvement is coming from.</p>
+    `.trim(),
+  },
+  {
+    slug: "landing-page-vs-homepage-mistake",
+    title: "Sending Paid Traffic to Your Homepage Is Costing You Conversions",
+    description:
+      "The most common paid advertising mistake isn't the targeting or the creative. It's where the click lands. Here's why dedicated landing pages outperform homepages — and what one needs to contain.",
+    date: "2026-05-19",
+    readTime: "6 min read",
+    category: "Web Development",
+    content: `
+<h2>The Most Expensive Mistake in Paid Advertising</h2>
+<p>You've spent time on the targeting. You've written the ad copy. The click costs you £4. And you send it to your homepage.</p>
+<p>Your homepage is built for multiple audiences with multiple goals — existing clients, job seekers, journalists, curious browsers. It has a navigation menu with eight options. It probably talks about your company history somewhere above the fold. None of that is what a paid traffic visitor needs.</p>
+<p>A paid traffic visitor arrived because a specific promise was made in your ad. They need that promise fulfilled immediately, with a clear path to acting on it, and nothing else competing for their attention. A homepage cannot do that. A dedicated landing page can.</p>
+
+<h2>The Data on This Is Not Close</h2>
+<p>Landing pages consistently outperform homepage traffic in paid campaigns. Typical lift: 30–80% improvement in conversion rate. The mechanism is simple — message match. When the ad says "AI automation for Kent WA businesses" and the page opens with exactly that headline, the visitor's brain registers confirmation instead of uncertainty. Uncertainty kills conversions faster than any other factor.</p>
+<p>Every second of cognitive load you add — navigation menus, company backstory, unrelated service offerings — is a second where a visitor asks "wait, is this right for me?" and reaches for the back button.</p>
+
+<h2>What a High-Converting Landing Page Contains</h2>
+<p>In order, from top to bottom:</p>
+<ul>
+  <li><strong>A headline that matches the ad promise exactly.</strong> Not approximately. Exactly. If your ad says "Cut your admin time with AI automation", your headline should say something semantically identical. Word-for-word match produces the best results; close match is acceptable.</li>
+  <li><strong>A subheadline that answers "for who?" and "so what?".</strong> One sentence. "For service businesses in Washington state spending more than 10 hours a week on manual processes."</li>
+  <li><strong>Social proof above the fold.</strong> One strong, specific result. Not a logo grid — a result. "Reduced client onboarding time from 4 days to 40 minutes using automated workflow." Specificity signals truthfulness.</li>
+  <li><strong>The offer, clearly stated.</strong> What happens when they click? Not "contact us" — describe the actual next step. "Book a free 30-minute automation audit — no commitment, no pitch, just an honest assessment of where you're losing time."</li>
+  <li><strong>A short form or single CTA button.</strong> Three fields maximum: name, email, one qualifying question. Every additional field reduces completion by 10–15%. If you need more information, get it on the call.</li>
+  <li><strong>Address the objection.</strong> Under the form: one sentence that pre-empts the most common reason people don't submit. Usually some version of "no commitment, no hard sell". Say it plainly.</li>
+</ul>
+<p>No navigation menu. No footer full of links. No "about us" section. One goal, one path.</p>
+
+<h2>The Technical Setup That Kills Results Before They Start</h2>
+<p>Even a well-designed landing page fails if the technical setup is wrong. Three things to check:</p>
+<ul>
+  <li><strong>Page speed.</strong> Run it through PageSpeed Insights. On mobile, Largest Contentful Paint above 2.5 seconds costs you conversions before anyone reads a word. Compress images, remove render-blocking scripts, use a CDN. A Next.js site deployed on Vercel handles most of this automatically.</li>
+  <li><strong>Conversion tracking.</strong> Verify that your thank-you page (or form submission event) is firing correctly in Google Tag Manager before spending a penny. If you can't measure conversions, you cannot optimise the campaign.</li>
+  <li><strong>Mobile layout.</strong> Over 60% of paid traffic lands on mobile. Open your landing page on an actual phone — not Chrome's mobile emulator. Is the headline readable? Does the form work? Is the CTA button above the fold? Fix mobile before optimising anything else.</li>
+</ul>
+
+<h2>How to Build and Test Them Efficiently</h2>
+<p>Build one landing page per audience segment or ad group theme — not one per keyword, but one per meaningfully different message. A/B test the headline first (biggest lever), then the offer framing, then the form length. Run each test until you have at least 100 conversions on each variant before declaring a winner. Statistical significance, not gut feel.</p>
+<p>A well-structured campaign has a clear chain: ad copy → landing page → form → thank-you page → email sequence. Every link in that chain should be intentional and measured. Most campaigns break at the second link. That's the one to fix first.</p>
+    `.trim(),
+  },
+  {
+    slug: "seo-mistakes-killing-rankings",
+    title: "5 SEO Mistakes That Are Quietly Killing Your Rankings (And How to Fix Each One)",
+    description:
+      "Most SEO problems aren't dramatic — they're quiet. They don't throw errors. They just silently suppress your rankings while you wonder why the traffic isn't coming. Here's the diagnostic.",
+    date: "2026-05-16",
+    readTime: "8 min read",
+    category: "Digital Marketing",
+    content: `
+<h2>Why Most SEO Problems Are Invisible</h2>
+<p>A broken link throws a 404. A missing page throws an error. But most SEO problems don't announce themselves at all — they just quietly prevent your pages from ranking as well as they should. You won't see a notification. You won't get an alert. You'll just notice that the traffic isn't coming, and you'll guess at why.</p>
+<p>This is the diagnostic framework I run on every site before making any recommendations. It's ordered by frequency of occurrence and impact on rankings.</p>
+
+<h2>Mistake 1: Targeting Keywords Your Page Doesn't Match</h2>
+<p>The most common SEO problem I see: a page optimised for a keyword that doesn't match the search intent behind that keyword. Intent mismatch is invisible in your keyword research but immediately apparent when you look at the SERP.</p>
+<p>Before targeting any keyword, search it yourself. What type of pages rank? If all 10 results are listicles ("10 best X") and your page is a service page, you will not rank — not because of technical issues, but because Google has determined that searchers want lists, not services. You either need to match the format or find a different keyword where your page type fits.</p>
+<p><strong>The fix:</strong> For every target keyword, manually check the top 5 results. Note the page type (listicle, service page, guide, product page), the content depth (word count, media, structure), and the angle (beginner, advanced, local, comparative). Match these signals in your page.</p>
+
+<h2>Mistake 2: Cannibalising Your Own Keywords</h2>
+<p>Keyword cannibalisation happens when two or more pages on your site compete for the same keyword. Google has to choose which one to rank — and it will often choose the wrong one, or split the ranking signal between both, meaning neither ranks as well as one consolidated page would.</p>
+<p>It's surprisingly common on sites with blog content. A service page targeting "AI automation services" and a blog post titled "What are AI automation services?" are competing with each other.</p>
+<p><strong>The fix:</strong> Search Google for <code>site:yourdomain.com "target keyword"</code>. If more than one page appears, you have cannibalisation. Consolidate the weaker page into the stronger one (301 redirect) or differentiate them so they target meaningfully different intent. Don't have two pages saying approximately the same thing.</p>
+
+<h2>Mistake 3: Internal Links That Don't Pass Signals Where You Need Them</h2>
+<p>Most sites have a backwards internal link structure. The homepage has all the authority (it gets the most external links) but the pages that need to rank — service pages, location pages, key blog posts — get very few internal links pointing to them.</p>
+<p>Internal links pass authority. A link from a high-traffic blog post to a service page tells Google that the service page is important and related to the blog post's topic. An orphan page — one with no internal links pointing to it — is effectively invisible to Googlebot unless it's in the sitemap.</p>
+<p><strong>The fix:</strong> Crawl your site with Screaming Frog or Sitebulb. Find pages with zero or one internal link pointing to them. Identify existing content that could naturally link to those pages. Add contextual links — not "click here", but anchor text that describes what the linked page is about ("our AI automation services in Bellevue"). Do this systematically for your highest-value pages first.</p>
+
+<h2>Mistake 4: Title Tags Written for Humans, Not Search Engines</h2>
+<p>Title tags are the single highest-weighted on-page SEO element and the most consistently misused. The common mistakes:</p>
+<ul>
+  <li><strong>Leading with the brand name.</strong> "Digital Kings | AI Automation Services" puts the keyword after the brand. Google truncates titles at ~60 characters on mobile. Lead with the keyword: "AI Automation Services in Kent, WA | Digital Kings".</li>
+  <li><strong>Keyword stuffing.</strong> "AI Automation Services | AI Automation Agency | AI Automation Company" — Google's systems recognise this and discount it. One clear primary keyword, one secondary if natural.</li>
+  <li><strong>Duplicate title tags.</strong> Every page needs a unique title tag. If your service pages all say "[City] | Digital Marketing Agency", Google can't distinguish between them and will struggle to rank each one appropriately.</li>
+  <li><strong>Title tags that don't match the page content.</strong> If your title says "AI Automation for Healthcare" but the page doesn't mention healthcare until paragraph four, there's a relevance gap Google will notice.</li>
+</ul>
+<p><strong>The fix:</strong> Audit every title tag. Lead with the primary keyword. Keep it under 60 characters. Make every one unique. Confirm it accurately describes the page content.</p>
+
+<h2>Mistake 5: Ignoring Core Web Vitals on Pages That Need to Rank</h2>
+<p>Core Web Vitals became a Google ranking factor in 2021 and have increased in weight since. The three metrics that matter:</p>
+<ul>
+  <li><strong>LCP (Largest Contentful Paint):</strong> How long until the main content loads. Target: under 2.5 seconds. Common culprit: hero images that aren't optimised or lazy-loaded. Fix: compress images, use Next.js Image component with priority on above-fold images, use a CDN.</li>
+  <li><strong>INP (Interaction to Next Paint):</strong> How quickly the page responds to user input. Target: under 200ms. Common culprit: heavy JavaScript executing on the main thread. Fix: defer non-critical scripts, reduce JavaScript bundle size.</li>
+  <li><strong>CLS (Cumulative Layout Shift):</strong> How much the page layout shifts while loading. Target: under 0.1. Common culprit: images without defined dimensions, fonts loading and causing reflow, dynamic content injected above existing content. Fix: always define width and height on images, use font-display: swap.</li>
+</ul>
+<p><strong>The fix:</strong> Run PageSpeed Insights on your three most important pages — homepage, main service page, top blog post. Fix the LCP issue first (biggest impact). Then CLS (usually easiest). Then INP (most technical). Don't optimise pages that don't matter to your rankings.</p>
+
+<h2>The Order of Operations</h2>
+<p>Fix intent mismatch first — no amount of technical optimisation will rank a page targeting the wrong search intent. Then cannibalisation, because competing with yourself is pure waste. Then internal links, because they're free authority redistribution. Then title tags, because they directly affect click-through rate. Then Core Web Vitals, because they're now a tie-breaker at similar quality levels.</p>
+<p>SEO compounds. A site with clean fundamentals and consistent, relevant content will outrank a technically perfect site with nothing to say. Get the fundamentals right, then focus on saying something worth ranking for.</p>
+    `.trim(),
+  },
+  {
     slug: "ai-agents-2026-business-guide",
     title: "AI Agents in 2026: What They Are and Why Every Business Needs to Pay Attention",
     description:
