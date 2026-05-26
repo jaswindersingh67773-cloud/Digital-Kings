@@ -49,6 +49,9 @@ export default function Navbar() {
           <Link href="/locations" className={linkClass}>
             Locations
           </Link>
+          <Link href="/faq" className={linkClass}>
+            FAQ
+          </Link>
           {/* Anchor links (homepage sections) */}
           {anchorLinks.map((link) => (
             <a
@@ -102,6 +105,13 @@ export default function Navbar() {
             className="text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors"
           >
             Locations
+          </Link>
+          <Link
+            href="/faq"
+            onClick={() => setOpen(false)}
+            className="text-sm tracking-widest uppercase text-[#888] hover:text-[#C9A84C] transition-colors"
+          >
+            FAQ
           </Link>
           {anchorLinks.map((link) => (
             <a
