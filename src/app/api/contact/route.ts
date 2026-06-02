@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     const { error } = await resend.emails.send({
       from: "Digital Kings <onboarding@resend.dev>",
-      to: ["jaswindersingh67773@gmail.com"],
+      to: ["jas@digikings.net"],
       replyTo: email,
       subject: `New enquiry from ${name}${business ? ` — ${business}` : ""}`,
       html: `
