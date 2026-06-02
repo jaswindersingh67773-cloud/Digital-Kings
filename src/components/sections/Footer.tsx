@@ -1,5 +1,13 @@
 import { Globe, Link2, X as XIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+const LEGAL_LINKS = [
+  { label: "Terms", href: "/terms" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Cookies", href: "/cookies" },
+  { label: "Disclaimer", href: "/disclaimer" },
+];
 
 export default function Footer() {
   return (
@@ -35,9 +43,22 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-[#1A1A1A] flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-[#555] text-xs">© {new Date().getFullYear()} Digital Kings. All rights reserved.</p>
-        <p className="text-[#555] text-xs">Built with precision. Powered by results.</p>
+      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-[#1A1A1A] flex flex-col gap-5">
+        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          {LEGAL_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-[#888] text-xs tracking-widest uppercase hover:text-[#C9A84C] transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-[#555] text-xs">© {new Date().getFullYear()} Digital Kings. All rights reserved.</p>
+          <p className="text-[#555] text-xs">Built with precision. Powered by results.</p>
+        </div>
       </div>
     </footer>
   );

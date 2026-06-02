@@ -127,5 +127,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...locationEntries,
+    ...["terms", "privacy", "cookies", "disclaimer"].map((slug) => ({
+      url: `${BASE_URL}/${slug}`,
+      lastModified: new Date("2026-06-01"),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    })),
   ];
 }

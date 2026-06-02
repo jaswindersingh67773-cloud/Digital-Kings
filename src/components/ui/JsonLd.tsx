@@ -6,6 +6,7 @@ export default function JsonLd() {
         "@type": "ProfessionalService",
         "@id": "https://digikings.net/#business",
         name: "Digital Kings",
+        legalName: "Digital Kings LLC",
         url: "https://digikings.net",
         logo: "https://digikings.net/logo-v2.png",
         description:
@@ -37,7 +38,7 @@ export default function JsonLd() {
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer enquiries",
-          email: "jaswindersingh6773@gmail.com",
+          email: "jas@digikings.net",
           availableLanguage: "English",
         },
       },
