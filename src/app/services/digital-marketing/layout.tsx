@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services | Digital Kings",
+  title: "Digital Marketing Services",
   description:
     "Data-driven digital marketing: Google Ads management, Meta Ads, SEO, email marketing, and analytics. Every decision traced to business outcomes, not vanity metrics.",
   keywords: [

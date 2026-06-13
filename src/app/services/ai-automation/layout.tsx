@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "AI Automation Services | Digital Kings",
+  title: "AI Automation Services",
   description:
     "Custom AI automation built on n8n and LLM integrations. Replace manual workflows, qualify leads automatically, and scale without scaling headcount. Serving ambitious businesses globally.",
   keywords: [

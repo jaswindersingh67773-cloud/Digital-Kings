@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development | Digital Kings",
+  title: "Custom Web Development",
   description:
     "Bespoke Next.js websites built for performance, SEO, and conversion. No templates, no page builders — engineered from scratch by a 10-year software engineer.",
   keywords: [

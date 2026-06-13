@@ -8,7 +8,7 @@ import { locations } from "@/lib/locations";
 import { MapPin, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Washington State | Digital Kings",
+  title: "Digital Marketing Agency in Washington State",
   description:
     "Digital Kings serves businesses across the Seattle/Puget Sound area — Bellevue, Redmond, Tacoma, Issaquah, Renton, Kent, Auburn, Federal Way, and Sammamish. AI automation, SEO, and custom web development.",
   alternates: {

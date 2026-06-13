@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
 
   return {
-    title: `${post.title} | Digital Kings`,
+    title: post.title,
     description: post.description,
     alternates: {
       canonical: `https://digikings.net/blog/${post.slug}`,

@@ -5,7 +5,7 @@ import Footer from "@/components/sections/Footer";
 import { blogPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Digital Kings",
+  title: "Blog",
   description:
     "Engineering-led insights on AI automation, web development, and data-driven digital marketing. No fluff — just what actually works.",
   alternates: {
