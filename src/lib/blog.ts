@@ -498,6 +498,396 @@ export const blogPosts: BlogPost[] = [
 <p>Every one of these trends rewards businesses that treat marketing as a system — something to be built, measured, iterated, and optimised — rather than a cost centre to be minimised. The tools are more powerful than they've ever been. The question is whether you're building with them or watching from the sidelines.</p>
     `.trim(),
   },
+  {
+    slug: "ai-automation-data-security",
+    title: "Is AI Automation Safe? What Actually Happens to Your Business Data",
+    description:
+      "The number one question business owners ask before automating anything: where does my data go, and who can see it? Here's the honest, technical answer — and how a properly built system keeps you in control.",
+    date: "2026-06-01",
+    readTime: "7 min read",
+    category: "AI Automation",
+    content: `
+<h2>The Real Risk Isn't What Most People Think</h2>
+<p>When business owners ask whether AI automation is "safe", they're usually picturing a hacker breaking into a robot. The actual risk is far more mundane and far more common: an employee pasting a customer list, a contract, or financial data into a free consumer AI tool — where that data may be stored, logged, and in some cases used to train future models.</p>
+<p>This is the fastest-growing data risk in small and mid-sized businesses today. And the important thing to understand is that it has nothing to do with automation being unsafe. It has everything to do with <strong>how</strong> a system is built and which tools it uses. A properly architected automation is almost always more secure than the manual process it replaces, because it removes the human habit of copying sensitive data into whatever tool is convenient.</p>
+
+<h2>Where Your Data Actually Goes in a Well-Built Automation</h2>
+<p>In a workflow we build, data moves along a defined path between systems you already trust. A typical flow looks like this: your contact form or CRM triggers a workflow in <strong>n8n</strong>, which passes a specific, minimal piece of data to a language model via the OpenAI or Claude API, receives a result, and writes it back to your system. Three things make that safe:</p>
+<ul>
+  <li><strong>Self-hosting.</strong> n8n is open-source and can run on your own infrastructure or a private cloud instance. The workflow logic and the data passing through it never sit on a third-party SaaS server you don't control. This is the single biggest security advantage of the stack we use over consumer no-code tools.</li>
+  <li><strong>Business-tier API agreements.</strong> When we send data to a language model, it goes through the paid API — not the consumer chat product. OpenAI and Anthropic both contractually commit that API data is <strong>not used to train their models</strong> and is retained only briefly for abuse monitoring (or not at all on zero-retention agreements). That is a fundamentally different arrangement from pasting into a free chatbot.</li>
+  <li><strong>Data minimisation.</strong> A good workflow sends only the field it needs. Classifying an email's intent doesn't require sending your customer's payment history. We design workflows to pass the minimum data required for each step — nothing more.</li>
+</ul>
+
+<h2>The Questions to Ask Before Automating Anything Sensitive</h2>
+<p>Whether you work with us or build in-house, these are the questions that separate a safe system from a risky one:</p>
+<ul>
+  <li><strong>Where does the workflow run — on a server we control, or someone else's cloud?</strong> Self-hosted or private-instance is the safer answer for sensitive data.</li>
+  <li><strong>Which AI provider handles the language tasks, and on what terms?</strong> Business API with a no-training, low-retention policy — not a consumer account.</li>
+  <li><strong>What is the minimum data each step needs?</strong> If a step is receiving more than it needs, that's a leak waiting to happen.</li>
+  <li><strong>Who has access to the credentials?</strong> API keys and database logins should be stored as encrypted secrets, not pasted into workflow steps in plain text.</li>
+  <li><strong>What happens when something fails?</strong> Failed runs shouldn't dump sensitive data into an error log that's visible to everyone.</li>
+</ul>
+
+<h2>Compliance: GDPR, CCPA, and Industry Rules</h2>
+<p>If you handle data from customers in the EU, UK, or California, automation actually helps your compliance position rather than threatening it — when it's built correctly. A documented, automated workflow is auditable: you can show exactly what data is processed, where it goes, and how long it's kept. That's far easier to demonstrate to a regulator than "our team copies it between three spreadsheets".</p>
+<p>For regulated industries — financial services, healthcare-adjacent, legal — the self-hosted approach matters even more, because it keeps regulated data inside infrastructure you control and can audit. We document the data flow of every workflow we build so you have a clear record of what's processed and where. It's also why our own <a href="/privacy">privacy practices</a> are written in plain English rather than buried in legalese.</p>
+
+<h2>Human Oversight Is a Feature, Not a Fallback</h2>
+<p>The safest automations keep a human in the loop where judgment matters. An AI agent can draft a client response, flag a high-value lead, or categorise an incoming document — but for anything consequential, the system presents its work for a one-click human approval rather than acting unilaterally. This isn't a limitation of the technology; it's a deliberate design choice that catches the rare hallucination or edge case before it reaches a customer.</p>
+
+<h2>The Honest Bottom Line</h2>
+<p>AI automation is safe when it's built by someone who treats data security as a design requirement, not an afterthought. It's risky when it's bolted together from free consumer tools with no thought to where data lands. The technology is the same; the engineering is what differs.</p>
+<p>If you want to automate a process that touches sensitive data and you want to understand exactly how it would be secured before committing, that's precisely what our free audit covers. We map the data flow, identify where the risks are, and show you the safe version before any work begins. <a href="/#contact">Book a free call</a> and we'll walk through it. You can also read our wider <a href="/blog/small-business-ai-automation-washington">guide to AI automation for Washington businesses</a> or browse the <a href="/services/ai-automation">AI automation service</a> in detail.</p>
+    `.trim(),
+  },
+  {
+    slug: "ai-automation-cost-roi",
+    title: "What AI Automation Actually Costs — and How Fast It Pays for Itself",
+    description:
+      "Real numbers, no vague ranges. Here's what AI automation costs for a small business, the ROI you can realistically expect, and the simple maths to work out whether a specific workflow is worth building.",
+    date: "2026-05-30",
+    readTime: "7 min read",
+    category: "AI Automation",
+    content: `
+<h2>Why Nobody Gives You a Straight Number</h2>
+<p>Search "how much does AI automation cost" and you'll get a wall of "it depends". It does depend — but that's not an excuse to avoid real figures. The reason most providers won't quote is that vague pricing protects their margin. We'd rather give you the actual ranges and the maths to evaluate any quote, including ours.</p>
+
+<h2>The Two Cost Models — and Which One Protects You</h2>
+<p>There are broadly two ways automation gets priced:</p>
+<ul>
+  <li><strong>Build-and-own (project fee).</strong> You pay once to have a system designed, built, documented, and handed over. You own it. There's no recurring fee to us, only the cost of the tools it runs on. This is how we work.</li>
+  <li><strong>Monthly retainer / per-seat platform.</strong> Many "AI automation agencies" charge an ongoing monthly fee — often $300 to $1,500+ per month — or you rent an off-the-shelf agent platform at $30 to $150 per user per month. The work is never finished because the revenue model depends on it not being finished.</li>
+</ul>
+<p>Neither is automatically wrong, but understand the incentive. A build-and-own model is aligned with getting you to a working, self-sufficient system as fast as possible. A retainer model is aligned with keeping you subscribed.</p>
+
+<h2>Realistic Build Costs by Complexity</h2>
+<p>For a small-to-medium business, here's what a custom-built, owned automation typically costs:</p>
+<ul>
+  <li><strong>Single-workflow build</strong> — e.g. lead qualification + CRM entry, or an automated follow-up sequence: <strong>$1,500–$2,500</strong>. Built and deployed in 1–2 weeks.</li>
+  <li><strong>Multi-workflow package</strong> — e.g. CRM automation + lead routing + weekly reporting: <strong>$3,000–$6,000</strong>. Roughly 3–5 weeks.</li>
+  <li><strong>Complex multi-system integration with AI agents</strong> — e.g. AI lead qualification + data enrichment + automated proposals: <strong>$6,000–$12,000+</strong>. Around 6–10 weeks.</li>
+</ul>
+<p>On top of the build, the <em>running</em> costs are usually modest: a self-hosted or cloud n8n instance ($0 to roughly $50/month depending on volume), and metered AI API usage (often $10–$100/month for a typical small-business workflow, because you only pay per task processed). There's no per-seat licence on the automations themselves.</p>
+
+<h2>The ROI Maths — Done Properly</h2>
+<p>Forget vague "10x your business" claims. Here's the actual calculation for any workflow you're considering:</p>
+<p><strong>Monthly time saved (hours) × loaded hourly cost of the person doing it = monthly value.</strong></p>
+<p>Worked example. Say a workflow eliminates 8 hours a week of a $35/hour staff member's time:</p>
+<ul>
+  <li>8 hours/week × 4.33 weeks = ~35 hours/month saved.</li>
+  <li>35 hours × $35 = <strong>$1,225/month in recovered capacity.</strong></li>
+  <li>On a $2,500 build, that's full payback in roughly <strong>two months</strong> — then it compounds every month after, effectively for free.</li>
+</ul>
+<p>This is why the industry data consistently shows automation paying for itself within <strong>3–6 months</strong>, with first-year ROI frequently exceeding 200%. Those aren't marketing numbers — they fall straight out of the time-saved maths above. And the calculation ignores the second-order gains: faster lead response, fewer errors, and consistency that doesn't depend on someone remembering to do the task.</p>
+
+<h2>The Costs People Forget to Count</h2>
+<p>A fair ROI calculation includes the hidden costs of <em>not</em> automating:</p>
+<ul>
+  <li><strong>The cost of slow lead response.</strong> Leads contacted within five minutes convert dramatically better than those contacted hours later. Manual follow-up is inconsistent by nature; that gap is lost revenue.</li>
+  <li><strong>The cost of errors.</strong> Manual data entry has a measurable error rate. Each mistake costs time to find and fix — and sometimes costs a customer.</li>
+  <li><strong>The cost of key-person risk.</strong> When a process lives only in one employee's head and habits, it breaks when they're off or they leave. A documented automation doesn't take holidays.</li>
+</ul>
+
+<h2>How to Avoid Overpaying</h2>
+<p>A few principles that keep you from wasting money:</p>
+<ul>
+  <li><strong>Automate by ROI, not by novelty.</strong> Rank every candidate task by hours saved × frequency, and build the top two or three first. Don't automate something impressive that saves 20 minutes a month.</li>
+  <li><strong>Insist on ownership and documentation.</strong> If you can't run and modify the system without the builder, you don't own it — you're renting it.</li>
+  <li><strong>Get a fixed-price scope before work starts.</strong> Open-ended hourly automation work is where budgets disappear. A proper audit produces a defined deliverable and a fixed quote.</li>
+  <li><strong>Start small, measure, expand.</strong> Prove the ROI on one workflow before committing to a large package.</li>
+</ul>
+
+<h2>Get the Numbers for Your Business</h2>
+<p>The only way to know what automation is worth for <em>your</em> operation is to map your actual recurring tasks and put hours and dollars against them. That's exactly what our free audit does — and it ends with a fixed-price scope, not a vague range. <a href="/#contact">Book a free call</a>, or see the broader <a href="/blog/small-business-ai-automation-washington">small business automation guide</a> and our <a href="/services/ai-automation">AI automation services</a>. If you're still weighing whether it's safe to automate sensitive processes, start with <a href="/blog/ai-automation-data-security">our piece on automation and data security</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "will-ai-automation-replace-employees",
+    title: "Will AI Automation Replace Your Employees? An Honest Answer",
+    description:
+      "It's the question behind every automation conversation. Here's a straight answer about what automation actually does to a team — what it removes, what it can't, and how to roll it out without wrecking morale.",
+    date: "2026-05-28",
+    readTime: "6 min read",
+    category: "AI Automation",
+    content: `
+<h2>The Short Answer</h2>
+<p>For the vast majority of small and medium businesses: no, automation won't replace your employees. It will replace <strong>specific tasks</strong> your employees currently do — almost always the tasks they like least. The distinction between "replacing a person" and "replacing a task" is the whole point, and it's where most of the fear comes from a misunderstanding.</p>
+
+<h2>What Automation Actually Removes</h2>
+<p>Automation is good at exactly one category of work: high-volume, rule-following, repetitive tasks that require consistency rather than judgment. In a typical team, that means:</p>
+<ul>
+  <li>Copying data between tools and into the CRM.</li>
+  <li>Sending the same follow-up emails and reminders.</li>
+  <li>Pulling the same weekly report from three dashboards.</li>
+  <li>Triaging and routing inbound enquiries.</li>
+  <li>Processing structured documents — invoices, orders, forms.</li>
+</ul>
+<p>Notice what these have in common: none of them are why you hired the person. Nobody's job satisfaction comes from manually retyping leads into HubSpot. These are the tasks that fill the day without advancing anything.</p>
+
+<h2>What Automation Can't Do (And Won't Soon)</h2>
+<p>The work that actually defines most roles is exactly the work automation can't replace:</p>
+<ul>
+  <li><strong>Judgment in ambiguous situations.</strong> Deciding how to handle an unhappy key client isn't a rule — it's read-the-room judgment.</li>
+  <li><strong>Relationships and trust.</strong> People buy from and stay with people. Automation can tee up the interaction; it can't be the relationship.</li>
+  <li><strong>Creative and strategic thinking.</strong> Deciding <em>what</em> to do is fundamentally different from executing a defined task. AI can draft; humans decide.</li>
+  <li><strong>Exception handling.</strong> Automation handles the 80% of cases that follow the pattern. The 20% of weird edge cases — the ones that actually need a brain — get routed to a human with full context attached.</li>
+</ul>
+<p>Even AI agents, which can reason and act more autonomously than old rule-based workflows, are designed to escalate the consequential and ambiguous decisions to people. The best systems make your team's judgment more leveraged, not redundant.</p>
+
+<h2>The Pattern We See in Practice</h2>
+<p>Across the businesses we work with, automation almost never leads to layoffs. What it leads to is one of two things:</p>
+<ul>
+  <li><strong>The same team does more.</strong> A business that was capped because everyone was buried in admin suddenly has capacity to take on more clients, respond faster, and grow — without proportionally growing headcount. The team's output rises; the team stays.</li>
+  <li><strong>People move up the value chain.</strong> The hours freed from data entry go into client work, strategy, and the things that actually need a person. Roles get more interesting, not eliminated.</li>
+</ul>
+<p>The honest exception: if a role consists <em>entirely</em> of one repetitive task — pure manual data entry and nothing else — automation does change that role. But even then, the usual outcome is redeployment to higher-value work, because the business now has spare capacity it wants to use, not destroy.</p>
+
+<h2>How to Roll It Out Without Wrecking Morale</h2>
+<p>Fear of automation among staff is real and worth managing directly. What works:</p>
+<ul>
+  <li><strong>Frame it as removing the worst parts of the job, not the job.</strong> Ask your team which tasks they'd happily never do again. Those are your automation candidates — and now the team is asking for it rather than fearing it.</li>
+  <li><strong>Involve the people who do the work.</strong> They understand the edge cases better than anyone. Building the automation with them produces a better system and turns sceptics into owners.</li>
+  <li><strong>Be explicit about what isn't changing.</strong> If nobody's losing their job, say so clearly and early. Ambiguity breeds the worst assumptions.</li>
+  <li><strong>Show the capacity dividend.</strong> Make it visible what the freed hours are being reinvested in — more clients, better service, less overtime.</li>
+</ul>
+
+<h2>The Real Competitive Question</h2>
+<p>The framing of "will automation replace my staff" is the wrong question. The right one is: <strong>will my competitors automate the busywork before I do?</strong> Because the business that frees its team from repetitive tasks responds faster, scales without ballooning costs, and makes fewer errors. The business that doesn't is paying skilled people to do work a system could handle — and competing against rivals who aren't.</p>
+<p>If you want to see specifically which of your tasks are worth automating — and confirm for yourself that it's tasks, not people — our free audit maps exactly that. <a href="/#contact">Book a free call</a>, read <a href="/blog/ai-agents-2026-business-guide">our guide to AI agents in 2026</a>, or explore the <a href="/services/ai-automation">AI automation service</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "n8n-vs-zapier-vs-make",
+    title: "n8n vs Zapier vs Make: Which Automation Tool Your Business Should Actually Use",
+    description:
+      "The three tools every automation conversation comes down to — compared honestly on cost, control, complexity, and data security. Here's how to pick the right one for your business, not the one with the best marketing.",
+    date: "2026-05-26",
+    readTime: "7 min read",
+    category: "AI Automation",
+    content: `
+<h2>Why This Choice Matters More Than It Looks</h2>
+<p>Picking an automation platform feels like a minor technical decision. It isn't. The tool you choose determines your ongoing costs, how much control you have over your data, how complex your workflows can get, and whether you're locked into a per-task pricing model that punishes you for growing. Choose wrong and you either hit a ceiling or watch your monthly bill climb every time volume increases.</p>
+<p>Here's the honest comparison. We standardise on n8n for most client work, and below I'll explain exactly when that's the right call — and when it isn't.</p>
+
+<h2>Zapier: Fastest to Start, Most Expensive to Scale</h2>
+<p><strong>Best for:</strong> non-technical teams that need simple automations live today.</p>
+<p>Zapier's strength is breadth and speed. It connects to over 7,000 apps and you can build your first "Zap" in minutes with zero technical knowledge. For a solo operator who wants "when a form is submitted, add a row to a spreadsheet and send a Slack message", Zapier is genuinely the fastest path.</p>
+<p>The catch is the pricing model. Zapier charges per task (each action in each run), and for high-volume or multi-step workflows that bill climbs quickly. It's also cloud-only — your data flows through Zapier's servers, with no self-hosting option — and its multi-step logic is limited compared to the alternatives. Great for simple and low-volume. Painful for complex and high-volume.</p>
+
+<h2>Make: The Visual Middle Ground</h2>
+<p><strong>Best for:</strong> growing businesses that need real branching logic at a reasonable price.</p>
+<p>Make (formerly Integromat) sits between Zapier and n8n. Its flowchart-style builder shows you exactly how data moves between systems, with routers that branch workflows based on conditions and filters. It handles genuinely multi-step logic better than Zapier and is generally cheaper per operation, while still being approachable for non-developers.</p>
+<p>Like Zapier, Make is cloud-only — so the same data-control limitation applies. It's the right pick when your workflows have outgrown simple linear "if this then that" but you don't need self-hosting or maximum control.</p>
+
+<h2>n8n: Most Control, Best Economics at Scale, Strongest for AI</h2>
+<p><strong>Best for:</strong> businesses that want to own their automation, control their data, or build AI-heavy workflows.</p>
+<p>n8n is open-source and can be self-hosted on your own infrastructure or run on n8n Cloud. That single fact drives most of its advantages:</p>
+<ul>
+  <li><strong>Cost at scale.</strong> Because you're not paying per task on a SaaS tier, high-volume workflows can cost 80–90% less to run than the equivalent on Zapier. The more you automate, the bigger the gap.</li>
+  <li><strong>Data control.</strong> Self-hosting means sensitive data never has to leave infrastructure you control — essential for regulated industries and a meaningful advantage for anyone handling customer data. (More on this in our piece on <a href="/blog/ai-automation-data-security">AI automation and data security</a>.)</li>
+  <li><strong>AI-native.</strong> n8n has native AI agent nodes and connects cleanly to the OpenAI and Claude APIs, making it the strongest choice when language models are doing real work inside the workflow.</li>
+  <li><strong>No ceiling.</strong> When a workflow gets too complex for a no-code builder, n8n lets you drop into code. You're never blocked by the tool's limits.</li>
+</ul>
+<p>The trade-off is honest: n8n has a steeper learning curve, and self-hosting requires basic server management. This is exactly the part most businesses hire out — you get n8n's economics and control without needing to run it yourself.</p>
+
+<h2>The Decision, Simplified</h2>
+<ul>
+  <li><strong>Choose Zapier if:</strong> you need one or two simple automations live this week, volume is low, and you're doing it yourself without technical help.</li>
+  <li><strong>Choose Make if:</strong> your workflows have real branching logic, you want better economics than Zapier, and cloud-only is fine for your data.</li>
+  <li><strong>Choose n8n if:</strong> you want to own the system outright, you handle sensitive data, you're building AI-powered workflows, or you're automating at enough volume that per-task pricing would hurt.</li>
+</ul>
+<p>For most of the businesses we work with, the combination of data control, AI capability, and economics-at-scale makes n8n the right long-term foundation — even though Zapier is faster to start. The right answer for a one-off simple task can genuinely be Zapier; the right answer for a business serious about automation is usually n8n.</p>
+
+<h2>The Tool Is the Smallest Part of the Decision</h2>
+<p>Here's the thing nobody selling you a platform will say: the tool matters far less than the design of the workflow running on it. A badly designed automation on n8n is worse than a well-designed one on Zapier. The hard part isn't clicking nodes together — it's knowing which process to automate, what data each step needs, where to keep a human in the loop, and how to handle the edge cases.</p>
+<p>That's the part we focus on. If you want help choosing the right tool <em>and</em> building the workflow properly, our free audit covers both. <a href="/#contact">Book a free call</a>, or read <a href="/blog/ai-automation-save-time">how the right automations save 20 hours a week</a> and explore the <a href="/services/ai-automation">AI automation service</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "small-business-marketing-budget",
+    title: "How Much Should a Small Business Spend on Marketing — and SEO or Ads First?",
+    description:
+      "Two of the most-asked and worst-answered questions in small business marketing. Here are real budget benchmarks, the maths behind them, and a clear framework for deciding whether to start with SEO or paid ads.",
+    date: "2026-05-31",
+    readTime: "7 min read",
+    category: "Digital Marketing",
+    content: `
+<h2>The Benchmark Everyone Quotes — and What It Misses</h2>
+<p>The common rule of thumb, echoed by the US Small Business Administration, is to spend <strong>7–8% of gross revenue</strong> on marketing for businesses under $5M in annual revenue. It's a reasonable anchor: a business doing $500K a year lands around $35,000–$40,000 annually, or roughly $3,000 a month.</p>
+<p>But the percentage rule hides the decision that actually matters. A small business below $500K revenue typically has $300–$2,500 a month to work with, and at that level <strong>where</strong> you put the money matters far more than the exact amount. Concentrating $1,500–$3,000 a month on one or two channels almost always beats spreading $5,000 across six. Focus beats breadth at small budgets — every time.</p>
+
+<h2>The Budget Tiers That Actually Reflect Reality</h2>
+<ul>
+  <li><strong>$300–$1,000/month:</strong> Enough for one channel done properly. Usually local SEO plus a small, tightly-targeted Google Ads campaign, or content plus organic. Not enough to run paid social effectively.</li>
+  <li><strong>$1,500–$3,000/month:</strong> The sweet spot for most small businesses. Enough to run paid ads with real signal <em>and</em> invest in SEO, or to dominate one channel completely.</li>
+  <li><strong>$3,000–$7,500/month:</strong> Multi-channel becomes viable — SEO, paid search, and paid social running together with proper tracking and creative testing.</li>
+  <li><strong>$7,500+/month:</strong> Full-funnel programmes with dedicated creative iteration, multiple campaign types, and aggressive testing budgets.</li>
+</ul>
+<p>One critical distinction: <strong>ad spend and management are separate costs</strong>. If you're paying an agency, their fee is on top of the money that actually goes to Google or Meta. Be wary of anyone who blurs the two — you want to know exactly how much of your budget reaches the ad platform versus the agency.</p>
+
+<h2>SEO vs Paid Ads: The Real Trade-Off</h2>
+<p>This isn't a question of which is "better" — they do different jobs on different timelines.</p>
+<p><strong>Paid ads buy traffic now.</strong> The moment your campaign goes live, you get visitors. But you pay for every single click, and the traffic stops the instant you stop paying. Google Ads often has a lower minimum viable budget than paid social, because targeted long-tail keywords can convert on modest spend, whereas paid social usually needs $1,500+/month to gather enough signal to optimise.</p>
+<p><strong>SEO compounds for free.</strong> It takes 3–6 months to produce meaningful organic traffic on competitive terms (faster for local and long-tail), but once you rank, the traffic keeps arriving without a per-click cost. The work you do in month one pays dividends in month twelve. This is why marketers consistently rank organic search as the top-ROI channel — and why local SEO in particular can return around $13 for every $1 invested, compared with roughly $8 per $1 on Google Ads.</p>
+
+<h2>So Which First? A Clear Framework</h2>
+<p>The honest answer depends on your timeline, margins, and cash position:</p>
+<ul>
+  <li><strong>Start with paid ads if:</strong> you need leads <em>now</em> (new business, seasonal window, cash-flow pressure), you have the margin to absorb cost-per-click while you learn, and you have a conversion-ready page to send traffic to. Paid ads also generate fast data about which messages and offers actually convert — intelligence you can then feed into your SEO and content.</li>
+  <li><strong>Start with SEO if:</strong> you can afford to wait 3–6 months for returns, you're in a market where you can realistically rank, and you want a durable asset rather than a tap you have to keep paying to keep open.</li>
+  <li><strong>The pragmatic answer for most:</strong> a small, disciplined paid campaign for immediate leads <em>and</em> early-stage cash flow, running alongside SEO foundations being laid for the long term. Paid funds the present; SEO builds the future. You don't have to choose forever — only choose what to lead with.</li>
+</ul>
+
+<h2>The Mistake That Wastes Every Budget</h2>
+<p>None of this matters if the traffic lands on a page that doesn't convert. The most common way small businesses waste marketing money isn't choosing the wrong channel — it's driving paid clicks to a homepage instead of a focused landing page, or ranking for terms that don't match what the page offers. Before you spend on either channel, make sure the destination is built to convert. (We cover this in depth in <a href="/blog/landing-page-vs-homepage-mistake">why sending paid traffic to your homepage costs you conversions</a> and <a href="/blog/website-not-converting">why your website isn't converting</a>.)</p>
+
+<h2>Set the Budget Around Outcomes, Not Averages</h2>
+<p>The right budget isn't a percentage someone quoted — it's the amount that lets you acquire customers profitably and reinvest the returns. Work out your cost per acquisition and the lifetime value of a customer, and the budget answers itself: if you can reliably turn $1 into $3 of profit, the question stops being "how much should I spend" and becomes "how fast can I scale".</p>
+<p>If you want a straight assessment of where your budget should go — paid, organic, or both — and what return is realistic in your market, that's what our free strategy call delivers. No pitch, just honest numbers. <a href="/#contact">Book a free call</a>, or explore the <a href="/services/digital-marketing">digital marketing service</a>. And before you spend a penny on Google Ads, read <a href="/blog/google-ads-wasting-budget">the audit that finds wasted ad spend</a>.</p>
+    `.trim(),
+  },
+  {
+    slug: "how-to-choose-digital-marketing-agency",
+    title: "How to Choose a Digital Marketing Agency: 7 Questions and 6 Red Flags",
+    description:
+      "Most businesses choose a marketing agency on a slick pitch and regret it within six months. Here are the questions that reveal real expertise, and the warning signs that should end the conversation.",
+    date: "2026-05-24",
+    readTime: "8 min read",
+    category: "Digital Marketing",
+    content: `
+<h2>Why So Many Agency Relationships Go Wrong</h2>
+<p>The marketing agency industry has a trust problem, and it's earned. Too many agencies sell on a polished pitch, lock clients into long contracts, report vanity metrics, and quietly underdeliver until the client gives up. The result is a market full of business owners who've been burned and assume all agencies are the same.</p>
+<p>They're not — but telling the good from the bad requires asking the right questions. The pitch deck won't reveal it. These will.</p>
+
+<h2>7 Questions That Reveal Real Expertise</h2>
+<ul>
+  <li><strong>"What percentage of your active clients have this channel as their primary focus?"</strong> If you need SEO and most of their work is social media management, you're hiring the wrong specialist regardless of how good they are. Depth in your specific channel matters more than breadth.</li>
+  <li><strong>"Can I speak to a current client where this is your main deliverable?"</strong> Not a testimonial they've curated — a reference you can actually call. Reluctance here is telling.</li>
+  <li><strong>"What's the smallest and largest budget you've managed in this channel in the last year?"</strong> This reveals whether your budget sits in their wheelhouse. A business used to $50K/month accounts may not give your $2,000 the attention it needs — and vice versa.</li>
+  <li><strong>"What would you <em>not</em> do for me?"</strong> An agency willing to turn down poor-fit work has a point of view. One that says yes to everything is selling hours, not expertise.</li>
+  <li><strong>"Walk me through how you'd approach my account in the first 90 days."</strong> A real answer is specific and includes measurement setup before spend. A vague answer ("we'll optimise your campaigns and grow your presence") means they don't have a process.</li>
+  <li><strong>"What does reporting look like, and which metrics do you hold yourselves to?"</strong> You want metrics tied to revenue — leads, qualified pipeline, conversion rate, cost per acquisition — not impressions and reach. The metrics they report are the metrics they optimise for.</li>
+  <li><strong>"Who specifically will work on my account?"</strong> Many agencies pitch with senior people and deliver with juniors. Ask who you'll actually be dealing with day to day, and whether that's who's in the room now.</li>
+</ul>
+
+<h2>6 Red Flags That Should End the Conversation</h2>
+<ul>
+  <li><strong>Guaranteed rankings or guaranteed results.</strong> No reputable agency can guarantee a #1 Google ranking — the algorithm isn't theirs to control. This single promise is the clearest signal of either dishonesty or incompetence. Anyone promising page-one in 30 days is lying.</li>
+  <li><strong>Won't hand over account ownership.</strong> Your Google Ads account, your website, your analytics, your domain — these must be yours, under your login. If an agency builds your ad account under their own account or refuses to give you admin access, they're holding your assets hostage. Walk away.</li>
+  <li><strong>Long lock-in contracts with no performance review.</strong> A 12-month contract with no break clause and no agreed performance checkpoints protects them, not you. Good agencies are confident enough to earn your business month to month, or to include genuine review points.</li>
+  <li><strong>Generic, one-size-fits-all proposals.</strong> If the proposal could apply to any business in any industry — swap the logo and it still reads fine — they haven't thought about <em>you</em>. You're buying a template.</li>
+  <li><strong>Vanity metrics in place of business outcomes.</strong> Reports full of impressions, reach, and "engagement" with nothing about leads, sales, or cost per acquisition are designed to look busy while hiding whether anything is actually working.</li>
+  <li><strong>Poor communication during the sales process.</strong> Slow replies, vague answers, and missed calls while they're trying to <em>win</em> you are the best version of the relationship you'll ever get. It only gets worse after you sign.</li>
+</ul>
+
+<h2>What Good Actually Looks Like</h2>
+<p>The agencies worth hiring share a few traits. They're specific about what they do and don't do. They set up measurement before spending your money. They report on metrics that connect to revenue. They give you ownership of your own accounts and assets without being asked. They're willing to be held accountable month to month. And they'll tell you something you don't want to hear — because an agency that only ever agrees with you isn't advising you, it's billing you.</p>
+
+<h2>Big Agency or Specialist?</h2>
+<p>A large, global agency can be excellent — but a small business often becomes an afterthought there, handed to a junior while the senior talent services the enterprise accounts. The question isn't "big or small", it's: <strong>will my business be a priority client or a rounding error?</strong> Often the right answer for a small business is a focused specialist or a smaller team where you deal directly with the person doing the work, not an account manager relaying messages.</p>
+
+<h2>The Test That Cuts Through Everything</h2>
+<p>Here's the fastest way to evaluate any agency: ask them a hard question about your business and see whether they give you a straight, specific answer — even an inconvenient one — or a smooth deflection. Expertise sounds like honesty. Sales sounds like reassurance.</p>
+<p>That's the standard we hold ourselves to. If you want a no-pitch conversation where you get a straight assessment of your situation — including whether we're even the right fit — that's exactly what our free strategy call is. <a href="/#contact">Book a free call</a>, see how we think about marketing in <a href="/blog/engineer-approach-marketing">the engineer's approach to digital marketing</a>, or read our <a href="/faq">FAQ</a> for how we structure work.</p>
+    `.trim(),
+  },
+  {
+    slug: "do-i-need-a-website-google-business-profile",
+    title: "Do You Need a Website If You Have a Google Business Profile and Social Media?",
+    description:
+      "A fair question — you can show up on Google Maps and post on Instagram for free. Here's an honest breakdown of what a Google Business Profile and social media can and can't do, and when a website becomes non-negotiable.",
+    date: "2026-05-27",
+    readTime: "6 min read",
+    category: "Web Development",
+    content: `
+<h2>The Honest Starting Point</h2>
+<p>Let's be fair to the question. You can create a Google Business Profile for free, show up on Google Search and Maps, list your hours, photos, phone number and directions, collect reviews, and even get messages — all without a website. Add an active Instagram or Facebook page and you have a real, findable online presence at zero cost. For some very early or very local businesses, that genuinely is enough to start.</p>
+<p>So the answer isn't a reflexive "you must have a website". It's: here's exactly what those free tools do well, where they fall short, and the point at which not having a website starts costing you money.</p>
+
+<h2>What a Google Business Profile and Social Media Do Well</h2>
+<ul>
+  <li><strong>Local discovery.</strong> A Google Business Profile is the single most important tool for showing up in the local map pack when someone searches "[your service] near me". For a local business, it's non-negotiable — with or without a website.</li>
+  <li><strong>Social proof.</strong> Reviews on your Profile and an active social feed signal that you're real, operating, and trusted.</li>
+  <li><strong>Reach and personality.</strong> Social media is excellent for staying visible, showing your work, and building a following over time.</li>
+</ul>
+<p>If you don't have these set up, that's the first priority — they matter even more once you do have a website, because they feed traffic to it.</p>
+
+<h2>Where They Fall Short — and It Costs You</h2>
+<p>The limitations show up exactly where money changes hands:</p>
+<ul>
+  <li><strong>You can't sell or take bookings properly.</strong> A Google Business Profile isn't an e-commerce platform and doesn't support real booking flows. If customers want to buy a product, book a service, or pay a deposit at 11pm, there's nowhere for them to do it. A website is where transactions actually happen, on your terms, around the clock.</li>
+  <li><strong>You don't control the platform — or your data.</strong> If Instagram changes its algorithm, suspends your account, or goes down, your audience and your customer history can vanish overnight. It's happened to plenty of businesses. A website is the one asset you fully own. Your followers are rented; your website is owned.</li>
+  <li><strong>Credibility has a ceiling.</strong> For many buyers, a professional website is the first real impression and the thing that signals you're established and serious. A business with only a social page can read as a side hustle — fairly or not. Higher-value customers especially expect a site.</li>
+  <li><strong>You can't tell your full story or rank for what you do.</strong> A Profile and a feed can't host detailed service pages, answer the specific questions buyers have, or rank in Google's organic results for the dozens of searches your customers actually type. That's where a website quietly out-earns social over time.</li>
+  <li><strong>No home for paid traffic.</strong> The moment you want to run Google or Meta ads, you need a focused page to send clicks to. Sending paid traffic to a social profile wastes most of the spend. (See <a href="/blog/landing-page-vs-homepage-mistake">why the landing page matters so much</a>.)</li>
+</ul>
+
+<h2>The Tipping Point: When a Website Becomes Non-Negotiable</h2>
+<p>You can probably get away without a website while all of these are true: you're very early, purely local, rely on word-of-mouth, don't sell or book online, and aren't running paid ads. The moment any one of these changes, a website stops being optional:</p>
+<ul>
+  <li>You want customers to buy, book, or pay online.</li>
+  <li>You're ready to run paid advertising.</li>
+  <li>You're competing for higher-value customers who expect to vet you properly.</li>
+  <li>You want to rank in Google for what you do, not just appear on the map.</li>
+  <li>You've felt the risk of having your whole presence on a platform you don't control.</li>
+</ul>
+
+<h2>It's Not Either/Or — It's a System</h2>
+<p>The businesses that win online don't choose between these tools — they connect them. The Google Business Profile captures local discovery and reviews. Social media builds awareness and personality. And the website is the hub they all point to — where you control the message, capture leads, take transactions, and own the relationship. Each feeds the others. The Profile drives traffic to the site; the site gives the social audience somewhere to convert.</p>
+<p>You don't need an expensive website to start — you need a fast, focused one built to convert the traffic those free channels send you. If you're weighing whether it's time, or what a site would actually need to do for your business, our free call gives you a straight answer with no pressure. <a href="/#contact">Book a free call</a>, see the <a href="/services/web-development">web development service</a>, or read <a href="/blog/website-not-converting">why most websites don't convert</a> so yours does from day one.</p>
+    `.trim(),
+  },
+  {
+    slug: "custom-website-vs-wordpress",
+    title: "Custom Website vs WordPress: Build Time, Maintenance, and Who Owns the Code",
+    description:
+      "The decision behind every new website project. Here's an honest comparison of custom-built versus WordPress on the questions that actually matter — speed, security, maintenance, ownership, and long-term cost.",
+    date: "2026-05-25",
+    readTime: "7 min read",
+    category: "Web Development",
+    content: `
+<h2>Framing the Real Decision</h2>
+<p>"Custom or WordPress" is usually asked as a budget question, but it's really a question about trade-offs: speed to launch versus long-term performance, low upfront cost versus low ongoing cost, convenience versus control. Neither option is universally right. Here's the honest breakdown on the questions people actually ask.</p>
+
+<h2>Build Time</h2>
+<p><strong>WordPress is faster to launch.</strong> With a pre-built theme, you can have a functional site live in days, and a professional WordPress build typically goes from kickoff to live in 2–8 weeks. If speed-to-launch is the single most important factor, WordPress wins.</p>
+<p><strong>A custom site takes longer up front</strong> because every layout and feature is built specifically for your business rather than adapted from a template. That's a real cost — but it's the source of the advantages below. You're trading a few extra weeks at the start for a site that's faster, more secure, and cheaper to run for years afterwards.</p>
+
+<h2>Performance and Speed</h2>
+<p>This is where the gap is widest. A custom site built on a modern stack — the one we use is Next.js, React, and Tailwind, deployed on Vercel's edge network — typically loads 3–5x faster than a comparable WordPress site. WordPress carries the overhead of its theme, its plugins, and a database query on most page loads; a custom site ships only the code your site actually needs.</p>
+<p>Speed isn't vanity. Google's own data ties slower load times directly to lower conversion rates and weaker rankings, and Core Web Vitals are a ranking factor. A custom site optimised for performance has a structural SEO and conversion advantage that a plugin-laden WordPress site struggles to match. (More on this in <a href="/blog/seo-mistakes-killing-rankings">the SEO mistakes quietly killing rankings</a>.)</p>
+
+<h2>Security</h2>
+<p><strong>WordPress powers a huge share of the web, which makes it the biggest target.</strong> The core software is reasonably secure, but the risk comes from plugins and themes — each one is third-party code that can introduce vulnerabilities, and outdated plugins are among the most common ways sites get hacked. A typical WordPress site runs a dozen or more plugins, each a potential entry point that needs patching.</p>
+<p><strong>A custom site has a far smaller attack surface.</strong> There's no plugin ecosystem to exploit and no shared, widely-known admin login to brute-force. Fewer moving parts, fewer vulnerabilities to patch.</p>
+
+<h2>Maintenance</h2>
+<p>The maintenance models differ in a way that matters for who depends on whom:</p>
+<ul>
+  <li><strong>WordPress</strong> runs on a constant update cycle — core, themes, and plugins all release updates to fix bugs and security holes. Many updates are point-and-click from the dashboard, which is convenient, but they have to be kept up with, and a plugin update occasionally breaks something and needs sorting. Neglected WordPress sites are how most hacks happen.</li>
+  <li><strong>A custom site</strong> has far less routine maintenance — there's no plugin treadmill — but changes to functionality require a developer. The trade-off is fewer emergencies and less ongoing patching, in exchange for needing technical help when you want to change how something works.</li>
+</ul>
+
+<h2>Who Owns the Code?</h2>
+<p>This is the question most people forget to ask, and it's one of the most important:</p>
+<ul>
+  <li><strong>Custom development:</strong> you typically own all the code outright. It's yours to host anywhere, modify, or hand to another developer. No platform owns your business.</li>
+  <li><strong>WordPress:</strong> you own your content and database, but the picture is murkier underneath. The WordPress core is open-source, while your theme and plugins come with their own licences — some free, some paid subscriptions that stop working if you stop paying, some that lock features behind a vendor. You own the house but rent some of the rooms.</li>
+</ul>
+<p>Whichever route you choose, get ownership in writing before work starts — the code, the hosting account, the domain, and the analytics should all be in your name. (An agency that won't hand these over is a red flag we cover in <a href="/blog/how-to-choose-digital-marketing-agency">how to choose an agency</a>.)</p>
+
+<h2>The Honest Cost Picture</h2>
+<p>WordPress usually has a lower upfront cost and a higher long-term cost — ongoing plugin subscriptions, maintenance, security patching, and the performance tax that quietly suppresses conversions. Custom has a higher upfront cost and a lower long-term cost — you pay more to build it, then run a faster, more secure, lower-overhead asset for years. Which wins depends entirely on your time horizon. For a site that's central to how you get customers and will be around for years, custom typically wins on total cost of ownership. For a quick, low-stakes brochure site you need live next week, WordPress can be the sensible call.</p>
+
+<h2>How to Decide</h2>
+<ul>
+  <li><strong>Lean WordPress if:</strong> budget is tight upfront, you need it live in days, you'll update content yourself often, and the site isn't your primary sales engine.</li>
+  <li><strong>Lean custom if:</strong> the website is central to winning customers, performance and SEO matter, you handle anything sensitive, or you want an owned asset with the lowest long-term cost and risk.</li>
+</ul>
+<p>We build custom because, for businesses where the website actually drives revenue, the performance, security, and ownership advantages compound over time. But we'll tell you honestly if your situation is one where a simpler route makes more sense. If you want a straight recommendation for your specific case, our free call gives you exactly that. <a href="/#contact">Book a free call</a>, explore the <a href="/services/web-development">web development service</a>, or read <a href="/blog/website-not-converting">why your website isn't converting</a> before you rebuild it.</p>
+    `.trim(),
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
